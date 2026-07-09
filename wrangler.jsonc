@@ -10,8 +10,16 @@
   },
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    // Where contact-form messages are delivered.
+    // Until a domain is verified in Resend, this MUST be the Resend account's
+    // own email (test mode only allows sending to yourself).
+    // After verifying avenzafinancial.com in Resend: change this to
+    // info@avenzafinancial.com and add CONTACT_FROM below.
+    "CONTACT_TO": "programacionagencia@gmail.com"
+    // "CONTACT_FROM": "Avenza <no-reply@avenzafinancial.com>"  // set once domain verified
   }
-  // Secrets (set via `wrangler secret put`):
-  //   RESEND_API_KEY   – API key for Resend (contact form email delivery)
-  //   CONTACT_TO        – (optional) destination inbox; defaults handled in code
+  // Secret (set via dashboard or `wrangler secret put`):
+  //   RESEND_API_KEY – API key for Resend (contact form email delivery)
 }
