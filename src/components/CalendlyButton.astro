@@ -1,0 +1,24 @@
+---
+import { site } from '../config';
+
+interface Props {
+  label: string;
+  variant?: 'primary' | 'outline' | 'navy';
+  class?: string;
+  style?: string;
+}
+const { label, variant = 'primary', class: extra = '', style } = Astro.props;
+const variantClass =
+  variant === 'outline' ? 'btn-outline' : variant === 'navy' ? 'btn-navy' : 'btn-primary';
+---
+<!-- Progressive enhancement: the href opens the Calendly page even without JS;
+     the global handler in Base.astro upgrades it to an inline popup. -->
+<a
+  href={site.calendlyUrl}
+  target="_blank"
+  rel="noopener"
+  data-calendly
+  class={`${variantClass} ${extra}`.trim()}
+  set:html={label}
+  style={style}
+></a>

@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/gerad/Downloads/avenza_site_8.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avenza Financial Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Avenza Financial Consulting FINAL_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#122034;
+  --navy-mid:#123D89;
+  --blue:#3a6fa5;
+  --ocre:#BC554B;
+  --blue-light:#5b8fc7;
+  --red-accent:#c0614a;
+  --white:#ffffff;
+  --gray-50:#f8f9fc;
+  --gray-100:#f0f2f7;
+  --gray-200:#e2e6ef;
+  --gray-400:#9ba3b5;
+  --gray-600:#5a6278;
+  --gray-800:#2d3348;
+  --max-w:1140px;
+  --radius:10px;
+  --radius-lg:18px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--gray-800);background:#fff;font-size:16px;line-height:1.7}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.97);
+  border-bottom:1px solid var(--gray-200);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.nav-inner{
+  max-width:var(--max-w);margin:0 auto;
+  padding:0 2rem;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-logo img{height:44px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--gray-600);
+  text-decoration:none;padding:6px 14px;border-radius:6px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--navy-mid);background:var(--gray-100)}
+.nav-links a.active{color:var(--navy-mid)}
+.nav-socials{display:flex;align-items:center;gap:10px}
+.nav-socials a{
+  width:34px;height:34px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gray-400);border:1px solid var(--gray-200);
+  transition:color .2s,border-color .2s,background .2s;
+  text-decoration:none;
+}
+.nav-socials a:hover{color:var(--navy-mid);border-color:var(--navy-mid);background:var(--gray-50)}
+.nav-socials svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-cta{
+  background:var(--ocre);color:#fff!important;
+  padding:9px 20px!important;border-radius:8px!important;
+  font-size:13px!important;white-space:nowrap;
+  transition:background .2s!important;
+}
+.nav-cta:hover{background:#a34540!important;color:#fff!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--gray-800);border-radius:2px;transition:.3s}
+.mobile-menu{
+  display:none;position:fixed;top:72px;left:0;right:0;
+  background:#fff;border-bottom:1px solid var(--gray-200);
+  padding:1rem 2rem 1.5rem;z-index:999;
+  flex-direction:column;gap:.25rem;
+}
+.mobile-menu a{
+  font-size:15px;font-weight:500;color:var(--gray-700);
+  text-decoration:none;padding:10px 0;
+  border-bottom:1px solid var(--gray-100);display:block;
+}
+.mobile-menu.open{display:flex}
+
+/* MAIN CONTENT */
+main{padding-top:72px}
+.page{display:none}
+.page.active{display:block}
+
+/* HERO - HOME */
+.hero-home{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,var(--blue) 100%);
+  padding:7rem 2rem 5rem;
+  position:relative;overflow:hidden;
+}
+.hero-home::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-home .container{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1}
+.hero-home-grid{display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hero-tag{
+  display:inline-block;
+  background:rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.85);
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 14px;border-radius:100px;margin-bottom:1.5rem;
+  border:1px solid rgba(255,255,255,0.15);
+}
+.hero-home h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  font-weight:700;color:#fff;
+  line-height:1.18;
+  margin-bottom:1.5rem;
+}
+.hero-home h1 em{color:#7fb3d3;font-style:normal}
+.hero-home p{
+  font-size:1.05rem;color:rgba(255,255,255,0.78);
+  line-height:1.75;margin-bottom:2rem;max-width:500px;
+}
+.hero-home p.small{font-size:.88rem;color:rgba(255,255,255,0.55);margin-bottom:0}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--navy-mid);
+  font-size:14px;font-weight:600;
+  padding:13px 26px;border-radius:9px;
+  text-decoration:none;transition:all .2s;
+  border:none;cursor:pointer;
+}
+.btn-primary:hover{background:var(--gray-100);transform:translateY(-1px)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#fff;
+  font-size:14px;font-weight:500;
+  padding:13px 26px;border-radius:9px;
+  text-decoration:none;transition:all .2s;
+  border:1.5px solid rgba(255,255,255,0.3);cursor:pointer;
+}
+.btn-outline:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.6)}
+.btn-navy{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ocre);color:#fff;
+  font-size:14px;font-weight:600;
+  padding:13px 26px;border-radius:9px;
+  text-decoration:none;transition:all .2s;
+  border:none;cursor:pointer;
+}
+.btn-navy:hover{background:#a34540;transform:translateY(-1px)}
+.hero-card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:var(--radius-lg);
+  padding:2rem;backdrop-filter:blur(10px);
+}
+.hero-card h3{color:#fff;font-size:1rem;font-weight:600;margin-bottom:1.25rem}
+.service-pill{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:8px;padding:10px 14px;margin-bottom:8px;
+  color:rgba(255,255,255,0.85);font-size:13px;
+}
+.service-pill .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--red-accent);flex-shrink:0;
+}
+
+/* SECTION LAYOUT */
+section{padding:5rem 2rem}
+.container{max-width:var(--max-w);margin:0 auto}
+.section-tag{
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:.75rem;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.7rem,3vw,2.3rem);
+  font-weight:700;color:var(--navy);
+  line-height:1.25;margin-bottom:1rem;
+}
+.section-subtitle{
+  font-size:1rem;color:var(--gray-600);
+  line-height:1.75;max-width:580px;
+}
+.section-header{margin-bottom:3rem}
+.section-header.centered{text-align:center}
+.section-header.centered .section-subtitle{margin:0 auto}
+
+/* ABOUT STRIP */
+.about-strip{
+  background:var(--gray-50);
+  border-top:1px solid var(--gray-200);
+  border-bottom:1px solid var(--gray-200);
+}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-block{position:relative}
+.about-accent-box{
+  background:var(--ocre);
+  border-radius:var(--radius-lg);
+  padding:2.5rem;color:#fff;
+}
+.about-accent-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:600;
+  margin-bottom:1rem;line-height:1.3;
+}
+.about-accent-box p{font-size:.9rem;color:rgba(255,255,255,0.8);line-height:1.7}
+.stat-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin-top:1.5rem;
+}
+.stat-item{
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;padding:1rem;
+  border:1px solid rgba(255,255,255,0.15);
+}
+.stat-item .num{font-size:1.5rem;font-weight:700;color:#fff}
+.stat-item .lbl{font-size:11px;color:rgba(255,255,255,0.65);margin-top:2px}
+.check-list{list-style:none;margin:1.5rem 0 2rem}
+.check-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.95rem;color:var(--gray-600);
+  padding:6px 0;
+}
+.check-list li::before{
+  content:'';display:block;
+  width:18px;height:18px;flex-shrink:0;
+  background:var(--blue);border-radius:50%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size:11px;background-position:center;background-repeat:no-repeat;
+  margin-top:3px;
+}
+
+/* SERVICES GRID */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.5rem;
+}
+.service-card{
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:2rem;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+  cursor:default;
+}
+.service-card:hover{
+  border-color:var(--ocre);
+  transform:translateY(-3px);
+  box-shadow:0 12px 40px rgba(18,61,137,.08);
+}
+.service-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.25rem;
+}
+.service-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{
+  font-size:1rem;font-weight:600;color:var(--navy);
+  margin-bottom:.6rem;
+}
+.service-card p{font-size:.88rem;color:var(--gray-600);line-height:1.65}
+
+/* RESOURCES */
+.resources-bg{background:var(--gray-50);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+.resources-list{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;margin-top:2rem;
+}
+.resource-item{
+  background:#fff;border:1px solid var(--gray-200);
+  border-radius:var(--radius);padding:1.25rem 1.5rem;
+  display:flex;align-items:center;gap:12px;
+  font-size:.9rem;color:var(--gray-700);font-weight:500;
+  transition:border-color .2s;
+}
+.resource-item:hover{border-color:var(--ocre)}
+.resource-item .ri{
+  width:36px;height:36px;flex-shrink:0;
+  border-radius:8px;background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;
+}
+.resource-item .ri svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* CTA FINAL */
+.cta-section{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+  text-align:center;padding:5rem 2rem;
+}
+.cta-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;
+  font-weight:700;margin-bottom:1rem;
+}
+.cta-section p{color:rgba(255,255,255,0.75);font-size:1rem;max-width:560px;margin:0 auto 2rem}
+.cta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:2.5rem}
+.cta-pill{
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:100px;
+  font-size:12px;color:rgba(255,255,255,0.8);
+  padding:5px 14px;
+}
+.online-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:100px;font-size:12px;color:rgba(255,255,255,0.65);
+  padding:6px 16px;margin-top:1.25rem;
+}
+.online-dot{width:6px;height:6px;border-radius:50%;background:#4ade80}
+
+/* FOOTER */
+footer{
+  background:var(--navy);color:rgba(255,255,255,0.7);
+  padding:4rem 2rem 2rem;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;
+  gap:3rem;max-width:var(--max-w);margin:0 auto;
+  padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.footer-brand img{height:38px;width:auto;margin-bottom:1.25rem;opacity:0.95}
+.footer-brand p{font-size:.85rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:260px}
+.footer-social{display:flex;gap:8px;margin-top:1.25rem}
+.footer-social a{
+  width:32px;height:32px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.6);transition:.2s;text-decoration:none;
+}
+.footer-social a:hover{background:var(--ocre);border-color:var(--ocre);color:#fff}
+.footer-social svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.4);margin-bottom:1.25rem;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:.6rem}
+.footer-col ul li a{
+  font-size:.88rem;color:rgba(255,255,255,0.6);
+  text-decoration:none;transition:color .2s;
+}
+.footer-col ul li a:hover{color:#fff}
+.footer-contact-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.85rem;color:rgba(255,255,255,0.6);
+  margin-bottom:.85rem;
+}
+.footer-contact-item svg{width:15px;height:15px;stroke:var(--blue-light);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px}
+.footer-bottom{
+  max-width:var(--max-w);margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,0.35);
+  flex-wrap:wrap;gap:.5rem;
+}
+
+/* HERO SUBPAGES */
+.hero-sub{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+  padding:5rem 2rem 4rem;text-align:center;
+}
+.hero-sub h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,2.8rem);
+  color:#fff;font-weight:700;margin-bottom:1rem;
+}
+.hero-sub p{
+  color:rgba(255,255,255,0.75);
+  font-size:1rem;max-width:580px;margin:0 auto;line-height:1.75;
+}
+.divider-line{
+  width:60px;height:3px;border-radius:2px;
+  background:var(--red-accent);
+  margin:.75rem auto 1.5rem;
+}
+.divider-line.left{margin-left:0}
+
+/* NOSOTROS */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.story-block{
+  border-left:3px solid var(--ocre);
+  padding-left:1.5rem;margin-bottom:2rem;
+}
+.story-block h3{
+  font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:.75rem;
+}
+.story-block p{font-size:.92rem;color:var(--gray-600);line-height:1.75}
+.values-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.25rem;margin-top:2rem;
+}
+.value-card{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--radius);padding:1.5rem;
+}
+.value-card .v-icon{
+  width:40px;height:40px;border-radius:9px;
+  background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;margin-bottom:1rem;
+}
+.value-card .v-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.value-card h4{font-size:.92rem;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+.value-card p{font-size:.82rem;color:var(--gray-600);line-height:1.6}
+.enfoque-box{
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  border-radius:var(--radius-lg);padding:2.5rem;color:#fff;margin-top:2rem;
+}
+.enfoque-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;margin-bottom:1rem;color:#fff;
+}
+.enfoque-box p{font-size:.9rem;color:rgba(255,255,255,0.78);line-height:1.75}
+
+/* SERVICIOS */
+.service-detail{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;align-items:start;padding:3rem 0;
+  border-bottom:1px solid var(--gray-200);
+}
+.service-detail:last-child{border-bottom:none}
+.service-detail-icon{
+  width:60px;height:60px;border-radius:16px;
+  background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;
+}
+.service-detail-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.service-detail h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;font-weight:600;color:var(--navy);margin-bottom:1rem;
+}
+.service-detail p{font-size:.93rem;color:var(--gray-600);line-height:1.75}
+.service-detail-aside{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);padding:2rem;
+}
+.service-detail-aside h4{
+  font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gray-400);margin-bottom:1rem;
+}
+.service-bullet{
+  display:flex;align-items:center;gap:10px;
+  font-size:.9rem;color:var(--gray-700);padding:7px 0;
+  border-bottom:1px solid var(--gray-200);
+}
+.service-bullet:last-child{border-bottom:none}
+.service-bullet::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--ocre);flex-shrink:0;
+}
+
+/* RECURSOS PAGE */
+.resources-topics{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.25rem;margin:2rem 0;
+}
+.resource-topic{
+  background:#fff;border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);padding:1.5rem 2rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.resource-topic:hover{border-color:var(--ocre);box-shadow:0 8px 24px rgba(58,111,165,.15)}
+.resource-topic .rt-icon{
+  width:42px;height:42px;border-radius:10px;margin-bottom:1rem;
+  background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;
+}
+.resource-topic .rt-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.resource-topic h3{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+.resource-topic p{font-size:.83rem;color:var(--gray-600);line-height:1.6}
+.resources-cta-box{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);padding:3rem;text-align:center;margin-top:3rem;
+}
+.resources-cta-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;color:var(--navy);margin-bottom:.75rem;
+}
+.resources-cta-box p{font-size:.9rem;color:var(--gray-600);margin-bottom:1.5rem}
+
+/* CONTACTO */
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.contact-info h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;color:var(--navy);margin-bottom:1rem;
+}
+.contact-info p{font-size:.92rem;color:var(--gray-600);line-height:1.75;margin-bottom:1.5rem}
+.contact-item{
+  display:flex;align-items:center;gap:12px;
+  padding:1rem;background:var(--gray-50);
+  border:1px solid var(--gray-200);border-radius:var(--radius);
+  margin-bottom:.75rem;
+}
+.contact-item .ci-icon{
+  width:38px;height:38px;border-radius:9px;flex-shrink:0;
+  background:var(--ocre);
+  display:flex;align-items:center;justify-content:center;
+}
+.contact-item .ci-icon svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-item .ci-text{font-size:.88rem}
+.contact-item .ci-text .lbl{color:var(--gray-400);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.contact-item .ci-text .val{color:var(--navy);font-weight:500}
+.online-info{
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  border-radius:var(--radius);padding:1.25rem 1.5rem;
+  display:flex;align-items:flex-start;gap:12px;margin-top:1rem;
+}
+.online-info svg{width:18px;height:18px;stroke:#7fb3d3;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.online-info p{font-size:.85rem;color:rgba(255,255,255,0.75);line-height:1.65}
+.form-card{
+  background:#fff;border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);padding:2.5rem;
+}
+.form-card h3{
+  font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:.25rem;
+}
+.form-card p{font-size:.85rem;color:var(--gray-400);margin-bottom:2rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{
+  display:block;font-size:.8rem;font-weight:600;
+  color:var(--gray-600);text-transform:uppercase;letter-spacing:.07em;
+  margin-bottom:.45rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  border:1px solid var(--gray-200);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:.9rem;color:var(--gray-800);
+  background:#fff;outline:none;
+  padding:10px 14px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--ocre);
+  box-shadow:0 0 0 3px rgba(58,111,165,.12);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{
+  width:100%;
+  background:linear-gradient(135deg,var(--navy-mid),var(--blue));
+  color:#fff;border:none;border-radius:9px;
+  font-family:'Inter',sans-serif;
+  font-size:.95rem;font-weight:600;
+  padding:13px;cursor:pointer;
+  transition:opacity .2s,transform .2s;
+}
+.btn-submit:hover{opacity:.9;transform:translateY(-1px)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-home-grid,.about-grid,.story-grid,.contact-grid,.service-detail{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-card{display:none}
+}
+@media(max-width:600px){
+  .nav-links,.nav-socials,.nav-cta{display:none!important}
+  .hamburger{display:flex}
+  .footer-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  section{padding:3.5rem 1.25rem}
+  .hero-home{padding:5rem 1.25rem 3.5rem}
+  .hero-sub{padding:4rem 1.25rem 3rem}
+}
+
+/* LANG SWITCHER */
+.lang-switcher{display:flex;align-items:center;background:var(--gray-100);border-radius:7px;padding:3px;gap:2px;}
+.lang-btn{font-size:12px;font-weight:600;color:var(--gray-400);background:none;border:none;padding:4px 10px;border-radius:5px;cursor:pointer;transition:.2s;letter-spacing:.04em;}
+.lang-btn.active{background:#fff;color:var(--navy-mid);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.lang-btn:hover:not(.active){color:var(--gray-600)}
+</style>
+  <!-- Calendly widget -->
+  <link href="./Avenza Financial Consulting FINAL_files/widget.css" rel="stylesheet">
+  <script src="./Avenza Financial Consulting FINAL_files/widget.js.descargar" type="text/javascript" async=""></script>
+  <style>
+    .btn-calendly{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--ocre);color:#fff;
+      font-size:14px;font-weight:600;
+      padding:13px 26px;border-radius:9px;
+      text-decoration:none;transition:all .2s;
+      border:none;cursor:pointer;
+    }
+    .btn-calendly:hover{background:#a34540;transform:translateY(-1px)}
+    .btn-calendly-outline{
+      display:inline-flex;align-items:center;gap:8px;
+      background:transparent;color:#fff;
+      font-size:14px;font-weight:500;
+      padding:13px 26px;border-radius:9px;
+      text-decoration:none;transition:all .2s;
+      border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;
+    }
+    .btn-calendly-outline:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+    .calendly-icon{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  </style>
+</head>
+<body style="">
+
+<nav>
+  <div class="nav-inner">
+    <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="nav-logo" onclick="showPage(&#39;home&#39;);return false">
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iQ2FwYV8yIiBkYXRhLW5hbWU9IkNhcGEgMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDMyLjI1IDkzLjEiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICMxMjIwMzQ7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzNhNmZhNjsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjYmM1NTRiOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj4KICAgIDxnPgogICAgICA8Zz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0xMzEuMSwwaDkuMzZsMTguMjUsNDcuODRoLTcuNjVsLTQuOTktMTMuMzNoLTIwLjU3bC00Ljk5LDEzLjMzaC03LjY1TDEzMS4xLDBabTEyLjQ0LDI3LjY4bC03LjcyLTIwLjY0LTcuNzksMjAuNjRoMTUuNTFaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMTgzLjk5LDQ3Ljg0TDE2Ny41OSwwaDcuNzlsMTMuMDUsMzkuNDNMMjAxLjQyLDBoNy44NmwtMTYuNCw0Ny44NGgtOC44OFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0yMjYuNywwaDMzLjU1djYuODNoLTI2LjA0djEyLjk4aDIxLjY2djYuODNoLTIxLjY2djE0LjM1aDI2LjA0djYuODNoLTMzLjU1VjBaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjc3Ljc1LDBoMTAuMjVsMjAuMTYsMzcuOTNWMGg3LjUydjQ3Ljg0aC0xMC4yNWwtMjAuMTYtMzcuOTN2MzcuOTNoLTcuNTJWMFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zNzAsMHY0LjAzbC0yNS45LDM2Ljk3aDI1LjU2djYuODNoLTM1Ljg4di00LjAzbDI1LjktMzYuOTdoLTI1LjQ5VjBoMzUuODFaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNDA0LjY1LDBoOS4zNmwxOC4yNSw0Ny44NGgtNy42NWwtNC45OS0xMy4zM2gtMjAuNTdsLTQuOTksMTMuMzNoLTcuNjVMNDA0LjY1LDBabTEyLjQ0LDI3LjY4bC03LjcyLTIwLjY0LTcuNzksMjAuNjRoMTUuNTFaIi8+CiAgICAgIDwvZz4KICAgICAgPGc+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTEyLjg2LDcyLjI0aDE0LjIzdjIuOWgtMTEuMDR2NS41MWg5LjE5djIuOWgtOS4xOXY4Ljk4aC0zLjE5di0yMC4yOFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0xMjguNzEsNzIuMjRoMy4xOXYyMC4yOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTMzLjkyLDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTU5LjMzLDcyLjI0aDMuOTdsNy43NCwyMC4yOGgtMy4yNWwtMi4xMi01LjY1aC04LjcybC0yLjEyLDUuNjVoLTMuMjRsNy43NC0yMC4yOFptNS4yNywxMS43M2wtMy4yNy04Ljc1LTMuMyw4Ljc1aDYuNThaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTcyLjM0LDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMjAwLjU3LDc0Ljc2Yy0xLjA0LDAtMiwuMTctMi44OC41Mi0uODguMzUtMS42NC44NS0yLjI3LDEuNTEtLjY0LjY2LTEuMTQsMS40Ni0xLjQ5LDIuNDFzLS41NCwyLjAyLS41NCwzLjIyLjE4LDIuMjcuNTQsMy4yMi44NiwxLjc0LDEuNDksMi4zOWMuNjQuNjUsMS4zOSwxLjE0LDIuMjcsMS40OS44OC4zNSwxLjg0LjUyLDIuODguNTIsMS43LDAsMy4xNi0uNDQsNC4zOS0xLjMsMS4yMy0uODcsMi4wNi0yLjEyLDIuNTEtMy43NGgzLjM5Yy0uMjUsMS4yMi0uNjgsMi4zMS0xLjI3LDMuMjktLjYuOTgtMS4zNCwxLjgxLTIuMjMsMi41MS0uODkuNjktMS45LDEuMjMtMy4wNCwxLjYxLTEuMTQuMzgtMi4zOS41Ni0zLjc0LjU2LTEuNTYsMC0yLjk5LS4yNi00LjI5LS43Ny0xLjI5LS41MS0yLjQtMS4yMy0zLjMzLTIuMTYtLjkzLS45My0xLjY0LTIuMDQtMi4xNC0zLjMzcy0uNzUtMi43Mi0uNzUtNC4yOS4yNS0yLjk5Ljc1LTQuMjksMS4yMi0yLjQxLDIuMTQtMy4zM2MuOTMtLjkzLDIuMDQtMS42NSwzLjMzLTIuMTZzMi43Mi0uNzcsNC4yOS0uNzdjMS4zMywwLDIuNTcuMTksMy43MS41NiwxLjE0LjM4LDIuMTUuOTEsMy4wNCwxLjU5Ljg5LjY5LDEuNjQsMS41MSwyLjI1LDIuNDguNjEuOTcsMS4wNCwyLjA1LDEuMjksMy4yNWgtMy40MmMtLjQ2LTEuNi0xLjMtMi44NC0yLjUxLTMuNy0xLjIxLS44Ni0yLjY2LTEuMjktNC4zNi0xLjI5WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTIxMi43NCw3Mi4yNGgzLjE5djIwLjI4aC0zLjE5di0yMC4yOFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0yMjUuMjUsNzIuMjRoMy45N2w3Ljc0LDIwLjI4aC0zLjI1bC0yLjEyLTUuNjVoLTguNzJsLTIuMTIsNS42NWgtMy4yNGw3Ljc0LTIwLjI4Wm01LjI3LDExLjczbC0zLjI3LTguNzUtMy4zLDguNzVoNi41OFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0yMzguMjYsNzIuMjRoMy4xOXYxNy4zOGgxMC40NnYyLjloLTEzLjY1di0yMC4yOFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0yNzAuNiw3NC43NmMtMS4wNCwwLTIsLjE3LTIuODguNTItLjg4LjM1LTEuNjQuODUtMi4yNywxLjUxLS42NC42Ni0xLjE0LDEuNDYtMS40OSwyLjQxcy0uNTQsMi4wMi0uNTQsMy4yMi4xOCwyLjI3LjU0LDMuMjIuODYsMS43NCwxLjQ5LDIuMzljLjY0LjY1LDEuMzksMS4xNCwyLjI3LDEuNDkuODguMzUsMS44NC41MiwyLjg4LjUyLDEuNywwLDMuMTYtLjQ0LDQuMzktMS4zLDEuMjMtLjg3LDIuMDYtMi4xMiwyLjUxLTMuNzRoMy4zOWMtLjI1LDEuMjItLjY4LDIuMzEtMS4yNywzLjI5LS42Ljk4LTEuMzQsMS44MS0yLjIzLDIuNTEtLjg5LjY5LTEuOSwxLjIzLTMuMDQsMS42MS0xLjE0LjM4LTIuMzkuNTYtMy43NC41Ni0xLjU2LDAtMi45OS0uMjYtNC4yOS0uNzdzLTIuNC0xLjIzLTMuMzMtMi4xNmMtLjkzLS45My0xLjY0LTIuMDQtMi4xNC0zLjMzcy0uNzUtMi43Mi0uNzUtNC4yOS4yNS0yLjk5Ljc1LTQuMjksMS4yMi0yLjQxLDIuMTQtMy4zM2MuOTMtLjkzLDIuMDQtMS42NSwzLjMzLTIuMTZzMi43Mi0uNzcsNC4yOS0uNzdjMS4zMywwLDIuNTcuMTksMy43MS41NiwxLjE0LjM4LDIuMTUuOTEsMy4wNCwxLjU5Ljg5LjY5LDEuNjQsMS41MSwyLjI1LDIuNDguNjEuOTcsMS4wNCwyLjA1LDEuMjksMy4yNWgtMy40MmMtLjQ2LTEuNi0xLjMtMi44NC0yLjUxLTMuNy0xLjIxLS44Ni0yLjY2LTEuMjktNC4zNi0xLjI5WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTI5Mi44OCw3MS44NmMxLjU2LDAsMi45OS4yNiw0LjI5Ljc3LDEuMjkuNTEsMi40LDEuMjMsMy4zMywyLjE2LjkzLjkzLDEuNjUsMi4wNCwyLjE2LDMuMzNzLjc3LDIuNzIuNzcsNC4yOS0uMjYsMi45OS0uNzcsNC4yOS0xLjIzLDIuNC0yLjE2LDMuMzNjLS45My45My0yLjA0LDEuNjUtMy4zMywyLjE2LTEuMjkuNTEtMi43Mi43Ny00LjI5Ljc3cy0yLjk5LS4yNi00LjI5LS43Ny0yLjQtMS4yMy0zLjMzLTIuMTZjLS45My0uOTMtMS42NC0yLjA0LTIuMTQtMy4zM3MtLjc1LTIuNzItLjc1LTQuMjkuMjUtMi45OS43NS00LjI5Yy41LTEuMjksMS4yMi0yLjQxLDIuMTQtMy4zMy45My0uOTMsMi4wNC0xLjY1LDMuMzMtMi4xNnMyLjcyLS43Nyw0LjI5LS43N1ptMCwyLjljLTEuMDQsMC0yLC4xNy0yLjg4LjUyLS44OC4zNS0xLjY0Ljg1LTIuMjcsMS41MS0uNjQuNjYtMS4xNCwxLjQ2LTEuNDksMi40MXMtLjU0LDIuMDItLjU0LDMuMjIuMTgsMi4yNy41NCwzLjIyLjg2LDEuNzQsMS40OSwyLjM5Yy42NC42NSwxLjM5LDEuMTQsMi4yNywxLjQ5Ljg4LjM1LDEuODQuNTIsMi44OC41MnMyLjAzLS4xNywyLjkxLS41MmMuODgtLjM1LDEuNjQtLjg0LDIuMjgtMS40OS42NC0uNjUsMS4xMy0xLjQ0LDEuNDktMi4zOS4zNi0uOTUuNTQtMi4wMi41NC0zLjIycy0uMTgtMi4yNy0uNTQtMy4yMmMtLjM2LS45NS0uODUtMS43NS0xLjQ5LTIuNDEtLjY0LS42Ni0xLjQtMS4xNi0yLjI4LTEuNTEtLjg4LS4zNS0xLjg1LS41Mi0yLjkxLS41MloiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0zMDUuMDUsNzIuMjRoNC4zNWw4LjU1LDE2LjA4di0xNi4wOGgzLjE5djIwLjI4aC00LjM1bC04LjU1LTE2LjA4djE2LjA4aC0zLjE5di0yMC4yOFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0zMzUuOTQsODcuMTZjMC0uNjItLjE1LTEuMTEtLjQ2LTEuNDgtLjMxLS4zNy0uNzItLjY3LTEuMjItLjlzLTEuMDctLjQyLTEuNzEtLjU2Yy0uNjQtLjE1LTEuMjgtLjI5LTEuOTQtLjQ1LS44My0uMTktMS42OS0uNDEtMi41Ni0uNjRzLTEuNjgtLjU1LTIuMzktLjk3Yy0uNzItLjQyLTEuMy0uOTctMS43NS0xLjY1cy0uNjgtMS41OC0uNjgtMi42OGMwLS45OC4xOS0xLjg1LjU4LTIuNTkuMzktLjc0LjkxLTEuMzcsMS41OC0xLjg4czEuNDUtLjksMi4zNi0xLjE2Yy45MS0uMjYsMS44OS0uMzksMi45Ni0uMzlzMi4xLjEzLDIuOTguMzljLjg5LjI2LDEuNjguNTksMi4zOS45Ny43LjM5LDEuMzIuODIsMS44NSwxLjI5LjUzLjQ3Ljk4LjkzLDEuMzUsMS4zOGwtMi4yNiwyLjA2Yy0uNzctLjkzLTEuNjgtMS42OS0yLjcxLTIuMjgtMS4wMy0uNTktMi4yNS0uODgtMy42NC0uODgtLjc1LDAtMS4zOS4wOS0xLjkxLjI2cy0uOTUuNC0xLjI3LjY4Yy0uMzMuMjgtLjU3LjYtLjcyLjk3LS4xNS4zNy0uMjMuNzQtLjIzLDEuMTMsMCwuNTYuMTQsMS4wMS40MSwxLjM1LjI3LjM0LjYzLjYxLDEuMDcuODMuNDQuMjEuOTUuMzgsMS41Mi41MS41Ny4xMywxLjE1LjI3LDEuNzUuNDIuNTguMTQsMS4xOC4yOCwxLjguNDMuNjIuMTYsMS4yMy4zMywxLjgzLjUyLjYuMTksMS4xNi40MywxLjY4Ljcxcy45OS42MiwxLjM5LDEuMDNjLjQxLjQxLjcyLjg5Ljk2LDEuNDVzLjM1LDEuMjMuMzUsMmMwLDEuMDEtLjE5LDEuODgtLjU4LDIuNjItLjM5Ljc0LS45MSwxLjM2LTEuNTgsMS44NS0uNjcuNDktMS40NC44Ny0yLjMzLDEuMTItLjg5LjI1LTEuODQuMzgtMi44NC4zOC0xLjA2LDAtMi4wOC0uMTMtMy4wNi0uMzgtLjk4LS4yNS0xLjg2LS41OC0yLjY3LS45N3MtMS41LS44NC0yLjEtMS4zMmMtLjYtLjQ4LTEuMDYtLjk2LTEuMzktMS40MmwyLjI2LTIuMDZjLjk3LDEuMDYsMi4wMywxLjg2LDMuMiwyLjQxczIuMzkuODEsMy42Ny44MSwyLjItLjI0LDIuOTYtLjczYy43NS0uNDgsMS4xMy0xLjIxLDEuMTMtMi4xN1oiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0zNDAuNzIsNzIuMjRoMy4xOXYxMy4yN2MwLDEuNTEuNDQsMi42NywxLjMyLDMuNDguODguODEsMi4xLDEuMjIsMy42NywxLjIyczIuNjktLjQxLDMuNTYtMS4yMmMuODctLjgxLDEuMy0xLjk3LDEuMy0zLjQ4di0xMy4yN2gzLjE5djEzLjAxYzAsMS4yMi0uMTksMi4zMS0uNTcsMy4yOXMtLjkyLDEuOC0xLjY0LDIuNDhjLS43Mi42OC0xLjU4LDEuMTktMi41OCwxLjU1LTEuMDEuMzYtMi4xNC41NC0zLjQyLjU0cy0yLjMyLS4xOC0zLjMyLS41NGMtMS0uMzYtMS44NC0uODctMi41NC0xLjU1LS42OS0uNjgtMS4yMy0xLjUtMS42MS0yLjQ4cy0uNTctMi4wNy0uNTctMy4yOXYtMTMuMDFaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzU4LjgzLDcyLjI0aDMuMTl2MTcuMzhoMTAuNDZ2Mi45aC0xMy42NXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzc3LjE0LDc1LjE0aC02LjM1di0yLjloMTUuODh2Mi45aC02LjM1djE3LjM5aC0zLjE5di0xNy4zOVoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0zODguMjcsNzIuMjRoMy4xOXYyMC4yOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzkzLjQ4LDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtNDIxLjU5LDgyLjA5aDEwLjY2di4zMmMwLDEuNTYtLjI2LDIuOTktLjc3LDQuMjlzLTEuMjMsMi40LTIuMTYsMy4zM2MtLjkzLjkzLTIuMDQsMS42NS0zLjMzLDIuMTYtMS4yOS41MS0yLjcyLjc3LTQuMjkuNzdzLTIuOTktLjI2LTQuMjktLjc3Yy0xLjI5LS41MS0yLjQtMS4yMy0zLjMzLTIuMTYtLjkzLS45My0xLjY1LTIuMDQtMi4xNi0zLjMzLS41MS0xLjI5LS43Ny0yLjcyLS43Ny00LjI5cy4yNi0yLjk5Ljc3LTQuMjljLjUxLTEuMjksMS4yMy0yLjQxLDIuMTYtMy4zMy45My0uOTMsMi4wNC0xLjY1LDMuMzMtMi4xNnMyLjcyLS43Nyw0LjI5LS43N2MxLjMzLDAsMi41Ny4xOSwzLjcxLjU2LDEuMTQuMzgsMi4xNS45MSwzLjA0LDEuNTkuODkuNjksMS42NCwxLjUxLDIuMjUsMi40OC42MS45NywxLjA0LDIuMDUsMS4yOSwzLjI1aC0zLjQ1Yy0uNDQtMS42LTEuMjctMi44NC0yLjQ4LTMuNy0xLjIxLS44Ni0yLjY2LTEuMjktNC4zNi0xLjI5LTEuMDQsMC0yLC4xNy0yLjg4LjUyLS44OC4zNS0xLjY0Ljg1LTIuMjcsMS41MS0uNjQuNjYtMS4xNCwxLjQ2LTEuNDksMi40MXMtLjU0LDIuMDItLjU0LDMuMjIuMTgsMi4yNy41NCwzLjIyLjg2LDEuNzQsMS40OSwyLjM5Yy42NC42NSwxLjM5LDEuMTQsMi4yNywxLjQ5Ljg4LjM1LDEuODQuNTIsMi44OC41MiwxLjcyLDAsMy4xOS0uNDQsNC40LTEuMywxLjIyLS44NywyLjA1LTIuMTIsMi40OS0zLjc0aC03LjAxdi0yLjlaIi8+CiAgICAgIDwvZz4KICAgICAgPGc+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNDAuNzkuOTFMLjE1LDg4LjA3Yy0uNDksMS4wNS4yOCwyLjI1LDEuNDMsMi4yNWgxMy4wM2MyLjQ2LDAsNC43LTEuNDMsNS43NC0zLjY1TDUwLjc1LDIxLjQ3Yy43OS0xLjcuNzktMy42NSwwLTUuMzVMNDMuNjYuOTFjLS41Ny0xLjIyLTIuMy0xLjIyLTIuODcsMFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Im0zMi4zLDczLjQ5bC02LjgsMTQuNThjLS40OSwxLjA1LjI4LDIuMjUsMS40MywyLjI1aDEzLjAzYzIuNDYsMCw0LjctMS40Myw1Ljc0LTMuNjVsNi44LTE0LjU4Yy40OS0xLjA1LS4yOC0yLjI1LTEuNDMtMi4yNWgtMTMuMDNjLTIuNDYsMC00LjcsMS40My01Ljc0LDMuNjVaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtNDYuNDksNDguOTFsMTcuNjEsMzcuNzZjMS4wNCwyLjIzLDMuMjgsMy42NSw1Ljc0LDMuNjVoMTMuMDNjMS4xNiwwLDEuOTItMS4yLDEuNDMtMi4yNWwtMTcuNjEtMzcuNzZjLTEuMDQtMi4yMy0zLjI4LTMuNjUtNS43NC0zLjY1aC0xMy4wM2MtMS4xNiwwLTEuOTIsMS4yLTEuNDMsMi4yNVoiLz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+" alt="Avenza Financial Consulting">
+    </a>
+    <ul class="nav-links">
+      <li><a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="" id="nav-home" onclick="showPage(&#39;home&#39;);return false">Home</a></li>
+      <li><a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="nav-nosotros" onclick="showPage(&#39;nosotros&#39;);return false" class="">Nosotros</a></li>
+      <li><a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="nav-servicios" onclick="showPage(&#39;servicios&#39;);return false" class="">Servicios</a></li>
+      <li><a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="nav-recursos" onclick="showPage(&#39;recursos&#39;);return false" class="">Recursos</a></li>
+      <li><a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="nav-contacto" onclick="showPage(&#39;contacto&#39;);return false" class="active">Contacto</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="nav-socials">
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang(&#39;es&#39;)" id="btn-es">ES</button>
+        <button class="lang-btn" onclick="setLang(&#39;en&#39;)" id="btn-en">EN</button>
+      </div>
+      <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="nav-cta" id="nav-cta-btn" onclick="showPage(&#39;contacto&#39;);return false">Agenda tu consulta</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-home" onclick="showPage(&#39;home&#39;);toggleMenu();return false">Home</a>
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-nosotros" onclick="showPage(&#39;nosotros&#39;);toggleMenu();return false">Nosotros</a>
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-servicios" onclick="showPage(&#39;servicios&#39;);toggleMenu();return false">Servicios</a>
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-recursos" onclick="showPage(&#39;recursos&#39;);toggleMenu();return false">Recursos</a>
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-contacto" onclick="showPage(&#39;contacto&#39;);toggleMenu();return false">Contacto</a>
+  <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" id="mob-cta" onclick="openCalendly();toggleMenu();return false" style="color:var(--ocre);font-weight:600;border-bottom:none;margin-top:.5rem">Agenda tu consulta →</a>
+</div>
+
+<main>
+
+<!-- ===== HOME ===== -->
+<div id="page-home" class="page">
+
+  <section class="hero-home">
+    <div class="container">
+      <div class="hero-home-grid">
+        <div>
+          <span id="home-tag" class="hero-tag">Financial Consulting</span>
+          <h1 id="home-h1">Bienvenidos a<br><em>Avenza</em> Financial<br>Consulting</h1>
+          <p id="home-hero-p">Ayudamos a personas, familias y emprendedores a organizar sus finanzas, proteger su futuro y construir mayor estabilidad con orientación clara, profesional y humana.</p>
+          <p id="home-hero-small" class="small">Impuestos · LLC · Bookkeeping · Seguros · Retiro · Asesoría</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+            <a id="home-hero-btn1" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-primary" onclick="openCalendly();return false">Agenda tu consulta →</a>
+            <a id="home-hero-btn2" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-outline" onclick="showPage(&#39;servicios&#39;);return false">Ver servicios</a>
+          </div>
+          <div id="home-hero-badge" class="online-badge" style="margin-top:1.5rem"><span class="online-dot"></span>Consultas 100% online · Atención personalizada</div>
+        </div>
+        <div class="hero-card">
+          <h3 id="home-card-h3">Nuestros servicios</h3>
+          <div id="pill-1" class="service-pill"><span class="dot"></span>Seguros de Vida</div>
+          <div id="pill-2" class="service-pill"><span class="dot"></span>Preparación de Impuestos</div>
+          <div id="pill-3" class="service-pill"><span class="dot"></span>Creación de LLC</div>
+          <div id="pill-4" class="service-pill"><span class="dot"></span>Bookkeeping</div>
+          <div id="pill-5" class="service-pill"><span class="dot"></span>Asesoría Financiera</div>
+          <div id="pill-6" class="service-pill"><span class="dot"></span>Planificación de Retiro</div>
+          <div id="pill-7" class="service-pill"><span class="dot"></span>Consultoría para Negocios</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p id="about-tag" class="section-tag">Sobre Avenza</p>
+          <h2 id="about-h2" class="section-title">Más que servicios financieros, orientación para tu crecimiento</h2>
+          <div class="divider-line left"></div>
+          <p id="about-p1" style="color:var(--gray-600);line-height:1.75;margin-bottom:1rem">En Avenza Financial Consulting entendemos lo abrumador que pueden sentirse los impuestos, las finanzas o el manejo de un negocio cuando nadie te ha enseñado cómo hacerlo correctamente.</p>
+          <p id="about-p2" style="color:var(--gray-600);line-height:1.75;margin-bottom:1rem">Por eso creamos un espacio donde las personas puedan encontrar orientación clara, profesional y accesible, sin sentirse confundidas por procesos complicados.</p>
+          <ul class="check-list">
+            <li id="about-check1">Orientación clara y sin complicaciones</li>
+            <li id="about-check2">Atención personalizada en cada caso</li>
+            <li id="about-check3">Consultas 100% online, donde estés</li>
+          </ul>
+          <a id="about-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-navy" onclick="showPage(&#39;nosotros&#39;);return false">Conoce nuestra historia →</a>
+        </div>
+        <div class="about-accent-box">
+          <h3 id="about-box-h3">Tu tranquilidad financiera comienza aquí</h3>
+          <p id="about-box-p">Nuestro enfoque no es solamente ofrecer servicios financieros, sino ayudarte a sentir más tranquilidad, organización y confianza en cada etapa de tu crecimiento.</p>
+          <div class="stat-row">
+            <div class="stat-item"><div class="num">7+</div><div id="stat-lbl1" class="lbl">Servicios especializados</div></div>
+            <div class="stat-item"><div class="num">100%</div><div id="stat-lbl2" class="lbl">Consultas online</div></div>
+            <div class="stat-item"><div class="num">MBA</div><div id="stat-lbl3" class="lbl">Formación académica</div></div>
+            <div class="stat-item"><div class="num">∞</div><div id="stat-lbl4" class="lbl">Compromiso contigo</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header centered">
+        <p id="srv-tag" class="section-tag">Lo que ofrecemos</p>
+        <h2 id="srv-h2" class="section-title">Servicios pensados para ayudarte a crecer con confianza</h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h3 id="sc1-h">Seguros de Vida</h3>
+          <p id="sc1-p">Protege el futuro de tu familia y crea mayor estabilidad financiera para quienes más amas.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+          <h3 id="sc2-h">Preparación de Impuestos</h3>
+          <p id="sc2-p">Presenta tus taxes personales y corporativos de manera organizada y profesional.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+          <h3 id="sc3-h">Creación y Registro de LLC</h3>
+          <p id="sc3-p">Formaliza tu negocio con mayor estructura, organización y seguridad.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+          <h3 id="sc4-h">Bookkeeping</h3>
+          <p id="sc4-p">Mantén tus finanzas organizadas y entiende mejor la situación financiera de tu negocio.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3 id="sc5-h">Asesoría Financiera</h3>
+          <p id="sc5-p">Organiza tus finanzas, crea mejores hábitos y construye estabilidad a largo plazo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+          <h3 id="sc6-h">Planificación de Retiro</h3>
+          <p id="sc6-p">Comienza hoy a prepararte para un futuro más tranquilo y estable.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a id="srv-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-navy" onclick="showPage(&#39;servicios&#39;);return false">Ver todos los servicios →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources-bg">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+        <div>
+          <p id="res-tag" class="section-tag">Educación financiera</p>
+          <h2 id="res-h2" class="section-title">Aprende, organiza y crece</h2>
+          <div class="divider-line left"></div>
+          <p id="res-p" style="color:var(--gray-600);line-height:1.75;margin-bottom:2rem">Creemos que la educación financiera puede transformar vidas. Por eso compartimos contenido claro y sencillo para ayudarte a tomar mejores decisiones.</p>
+          <a id="res-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-navy" onclick="showPage(&#39;recursos&#39;);return false">Explorar recursos →</a>
+        </div>
+        <div class="resources-list">
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div><span id="res-r1">Taxes personales y corporativos</span></div>
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div><span id="res-r2">LLC vs S-Corp: diferencias</span></div>
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div><span id="res-r3">Bookkeeping y organización</span></div>
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div><span id="res-r4">Consejos para emprendedores</span></div>
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><span id="res-r5">Seguros y protección financiera</span></div>
+          <div class="resource-item"><div class="ri"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div><span id="res-r6">Planificación de retiro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 id="cta-h2">Estamos aquí para ayudarte</h2>
+      <p id="cta-p">Ya sea que necesites ayuda con tus impuestos, quieras comenzar un negocio, organizar tus finanzas o proteger el futuro de tu familia, estaremos felices de acompañarte.</p>
+      <div class="cta-pills">
+        <span id="cta-pill1" class="cta-pill">Impuestos</span>
+        <span id="cta-pill2" class="cta-pill">LLC</span>
+        <span id="cta-pill3" class="cta-pill">Bookkeeping</span>
+        <span id="cta-pill4" class="cta-pill">Seguros de Vida</span>
+        <span id="cta-pill5" class="cta-pill">Retiro</span>
+        <span id="cta-pill6" class="cta-pill">Asesoría</span>
+      </div>
+      <a id="cta-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-primary" onclick="openCalendly();return false">Agenda una consulta →</a>
+      <div id="cta-badge" class="online-badge"><span class="online-dot"></span>Consultas realizadas de manera online</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== NOSOTROS ===== -->
+<div id="page-nosotros" class="page">
+
+  <section class="hero-sub">
+    <div class="container">
+      <p id="nos-tag" class="section-tag" style="color:rgba(255,255,255,0.6)">Quiénes somos</p>
+      <h1 id="nos-h1">La historia detrás de Avenza</h1>
+      <div class="divider-line"></div>
+      <p id="nos-hero-p">Avenza Financial Consulting nació desde una historia real de crecimiento, esfuerzo y deseo de ayudar a otras personas a construir un futuro financiero más estable y organizado.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <div class="story-block">
+            <h3 id="nos-s1-h">Nuestra historia</h3>
+            <p id="nos-s1-p">Como muchas personas, también enfrentamos momentos de incertidumbre financiera y situaciones que hicieron evidente lo importante que es tener orientación clara y acceso a educación financiera.</p>
+          </div>
+          <div class="story-block">
+            <h3 id="nos-s2-h">Formación y crecimiento</h3>
+            <p id="nos-s2-p">Con esfuerzo, disciplina y educación se construyó el camino profesional que dio vida a Avenza Financial Consulting, con estudios en Administración de Empresas con enfoque en Negocios Internacionales y posteriormente una Maestría en Administración.</p>
+          </div>
+          <div class="story-block">
+            <h3 id="nos-s3-h">La pasión por ayudar</h3>
+            <p id="nos-s3-p">A lo largo de ese proceso nació la pasión por ayudar a personas, familias y emprendedores a entender mejor sus finanzas, organizar sus negocios y tomar decisiones con mayor confianza.</p>
+          </div>
+          <a id="nos-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-navy" onclick="openCalendly();return false">Agenda tu consulta →</a>
+        </div>
+        <div>
+          <div class="enfoque-box">
+            <h3 id="nos-enf-h">Nuestro enfoque</h3>
+            <p id="nos-enf-p1">Avenza Financial Consulting fue creada para brindar apoyo, educación y orientación a personas trabajadoras y emprendedores que desean crecer, proteger a sus familias y construir estabilidad financiera.</p>
+            <p id="nos-enf-p2" style="margin-top:1rem">Nuestro objetivo es que cada cliente se sienta escuchado, acompañado y guiado en cada etapa de su crecimiento financiero y profesional.</p>
+            <p id="nos-enf-quote" style="margin-top:1rem;font-style:italic;color:rgba(255,255,255,.6)">"Porque organizar tus finanzas no solamente cambia números, también puede cambiar tu tranquilidad, tu estabilidad y tu futuro."</p>
+          </div>
+          <div class="values-grid" style="margin-top:1.5rem">
+            <div class="value-card">
+              <div class="v-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+              <h4 id="val1-h">Confianza</h4>
+              <p id="val1-p">Tu información y tu futuro son tratados con total profesionalismo.</p>
+            </div>
+            <div class="value-card">
+              <div class="v-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+              <h4 id="val2-h">Claridad</h4>
+              <p id="val2-p">Explicamos cada proceso de manera sencilla y comprensible.</p>
+            </div>
+            <div class="value-card">
+              <div class="v-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+              <h4 id="val3-h">Cercanía</h4>
+              <p id="val3-p">Atención personalizada adaptada a tu situación única.</p>
+            </div>
+            <div class="value-card">
+              <div class="v-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+              <h4 id="val4-h">Crecimiento</h4>
+              <p id="val4-p">Cada servicio está orientado a fortalecer tu futuro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 id="nos-cta-h">Tu crecimiento es nuestra misión</h2>
+      <p id="nos-cta-p">Estamos aquí para acompañarte en cada etapa de tu camino financiero con orientación clara, profesional y humana.</p>
+      <a id="nos-cta-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-primary" onclick="openCalendly();return false">Agenda tu consulta →</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== SERVICIOS ===== -->
+<div id="page-servicios" class="page">
+
+  <section class="hero-sub">
+    <div class="container">
+      <p id="srv-hero-tag" class="section-tag" style="color:rgba(255,255,255,0.6)">Nuestros servicios</p>
+      <h1 id="srv-hero-h1">Servicios diseñados para ayudarte a crecer con confianza</h1>
+      <div class="divider-line"></div>
+      <p id="srv-hero-p">Ofrecemos soluciones financieras claras y personalizadas para ayudarte a organizar, proteger y fortalecer tus finanzas personales y de negocio.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h2 id="sd1-h">Seguros de Vida</h2>
+          <p id="sd1-p1">Un seguro de vida es una herramienta importante para proteger a las personas que más amas y brindar estabilidad financiera en momentos inesperados.</p>
+          <p id="sd1-p2" style="margin-top:1rem">Te ayudamos a entender las diferentes opciones disponibles y encontrar una cobertura que se adapte a tus necesidades, metas y situación financiera.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd1-aside_h">¿Para quién es?</h4>
+          <div id="sd1-b1" class="service-bullet">Personas que quieren proteger a su familia</div>
+          <div id="sd1-b2" class="service-bullet">Padres con hijos dependientes</div>
+          <div id="sd1-b3" class="service-bullet">Personas con responsabilidades financieras</div>
+          <div id="sd1-b4" class="service-bullet">Quienes buscan crear estabilidad a largo plazo</div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg></div>
+          <h2 id="sd2-h">Preparación de Impuestos</h2>
+          <p id="sd2-p1">Te ayudamos a presentar tus taxes de manera correcta, organizada y profesional, buscando evitar errores, multas y problemas futuros.</p>
+          <p id="sd2-p2" style="margin-top:1rem">También te orientamos para que entiendas mejor tu situación financiera y conozcas posibles deducciones o beneficios aplicables a tu caso.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd2-aside_h">Incluye</h4>
+          <div id="sd2-b1" class="service-bullet">Taxes personales (Individual)</div>
+          <div id="sd2-b2" class="service-bullet">Taxes corporativos</div>
+          <div id="sd2-b3" class="service-bullet">Orientación sobre deducciones</div>
+          <div id="sd2-b4" class="service-bullet">Revisión de situación fiscal</div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+          <h2 id="sd3-h">Creación y Registro de LLC</h2>
+          <p id="sd3-p1">Formalizar tu negocio puede ayudarte a crear mayor estructura, protección y organización financiera.</p>
+          <p id="sd3-p2" style="margin-top:1rem">Te acompañamos durante el proceso de creación y registro de tu LLC, explicándote cada paso de manera sencilla para que puedas comenzar con más seguridad y confianza.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd3-aside_h">El proceso incluye</h4>
+          <div id="sd3-b1" class="service-bullet">Asesoría sobre tipo de entidad</div>
+          <div id="sd3-b2" class="service-bullet">Registro de la LLC</div>
+          <div id="sd3-b3" class="service-bullet">Orientación sobre estructura</div>
+          <div id="sd3-b4" class="service-bullet">Pasos siguientes post-registro</div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+          <h2 id="sd4-h">Bookkeeping y Organización Financiera</h2>
+          <p id="sd4-p1">Mantener tus ingresos, gastos y movimientos financieros organizados es clave para entender la realidad financiera de tu negocio.</p>
+          <p id="sd4-p2" style="margin-top:1rem">Nuestro servicio de bookkeeping te ayuda a mantener tus cuentas claras, prepararte correctamente para taxes y tomar decisiones más inteligentes.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd4-aside_h">Beneficios</h4>
+          <div id="sd4-b1" class="service-bullet">Cuentas siempre al día</div>
+          <div id="sd4-b2" class="service-bullet">Preparación correcta para taxes</div>
+          <div id="sd4-b3" class="service-bullet">Visibilidad financiera clara</div>
+          <div id="sd4-b4" class="service-bullet">Decisiones más inteligentes</div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+          <h2 id="sd5-h">Asesoría Financiera</h2>
+          <p id="sd5-p1">Nuestra asesoría está enfocada en ayudarte a entender mejor tu situación económica, organizar tus finanzas y construir estabilidad a largo plazo.</p>
+          <p id="sd5-p2" style="margin-top:1rem">También brindamos orientación para personas que desean salir de deudas, crear presupuestos y mejorar sus hábitos financieros.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd5-aside_h">Ideal para</h4>
+          <div id="sd5-b1" class="service-bullet">Personas que quieren organizar sus finanzas</div>
+          <div id="sd5-b2" class="service-bullet">Quienes buscan salir de deudas</div>
+          <div id="sd5-b3" class="service-bullet">Emprendedores en crecimiento</div>
+          <div id="sd5-b4" class="service-bullet">Familias con metas financieras</div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+          <h2 id="sd6-h">Planificación de Retiro</h2>
+          <p id="sd6-p1">La planificación de retiro te ayuda a prepararte financieramente para las próximas etapas de tu vida y construir mayor tranquilidad a largo plazo.</p>
+          <p id="sd6-p2" style="margin-top:1rem">Te orientamos sobre diferentes opciones y estrategias para comenzar a construir estabilidad para tu futuro desde hoy.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd6-aside_h">Te ayudamos con</h4>
+          <div id="sd6-b1" class="service-bullet">Opciones de planes de retiro</div>
+          <div id="sd6-b2" class="service-bullet">Estrategias de ahorro a largo plazo</div>
+          <div id="sd6-b3" class="service-bullet">Proyecciones financieras</div>
+          <div id="sd6-b4" class="service-bullet">Pasos para comenzar hoy</div>
+        </div>
+      </div>
+
+      <div class="service-detail" style="border-bottom:none">
+        <div>
+          <div class="service-detail-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+          <h2 id="sd7-h">Consultoría para Pequeños Negocios</h2>
+          <p id="sd7-p1">Emprender puede ser emocionante, pero también desafiante cuando no existe orientación clara sobre organización y procesos financieros.</p>
+          <p id="sd7-p2" style="margin-top:1rem">Nuestro enfoque es ayudarte a estructurar y organizar tu negocio para que puedas crecer de manera más profesional y estable.</p>
+        </div>
+        <div class="service-detail-aside">
+          <h4 id="sd7-aside_h">Áreas de apoyo</h4>
+          <div id="sd7-b1" class="service-bullet">Estructura y organización del negocio</div>
+          <div id="sd7-b2" class="service-bullet">Procesos financieros básicos</div>
+          <div id="sd7-b3" class="service-bullet">Orientación para emprendedores</div>
+          <div id="sd7-b4" class="service-bullet">Plan de crecimiento profesional</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 id="srv-cta-h">Agenda tu consulta</h2>
+      <p id="srv-cta-p">Estamos aquí para ayudarte a encontrar soluciones claras para tus necesidades financieras y acompañarte en cada etapa de tu crecimiento.</p>
+      <a id="srv-cta-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-primary" onclick="openCalendly();return false">Contáctanos →</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== RECURSOS ===== -->
+<div id="page-recursos" class="page">
+
+  <section class="hero-sub">
+    <div class="container">
+      <p id="rec-tag" class="section-tag" style="color:rgba(255,255,255,0.6)">Educación financiera</p>
+      <h1 id="rec-h1">Aprende, organiza y crece</h1>
+      <div class="divider-line"></div>
+      <p id="rec-hero-p">Creemos que la educación financiera puede transformar vidas. Muchas personas nunca tuvieron la oportunidad de aprender sobre impuestos, negocios, ahorro o cómo organizar correctamente sus finanzas.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <p id="rec-content-tag" class="section-tag">Contenido educativo</p>
+        <h2 id="rec-content-h" class="section-title">Temas que compartiremos contigo</h2>
+        <div class="divider-line left"></div>
+        <p id="rec-content-p" class="section-subtitle">Por eso en Avenza Financial Consulting queremos crear un espacio donde puedas encontrar información clara, sencilla y útil para tomar mejores decisiones financieras.</p>
+      </div>
+      <div class="resources-topics">
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+          <h3 id="rt1-h">Taxes personales y corporativos</h3>
+          <p id="rt1-p">Entiende cómo funcionan los impuestos, fechas clave y cómo prepararte cada año.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+          <h3 id="rt2-h">LLC vs S-Corp: diferencias</h3>
+          <p id="rt2-p">Conoce las ventajas de cada estructura y cuál se adapta mejor a tu negocio.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+          <h3 id="rt3-h">Bookkeeping y organización financiera</h3>
+          <p id="rt3-p">Aprende cómo mantener tus finanzas ordenadas desde el primer día de tu negocio.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+          <h3 id="rt4-h">Consejos para emprendedores</h3>
+          <p id="rt4-p">Guías prácticas para estructurar, organizar y hacer crecer tu negocio.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h3 id="rt5-h">Seguros de vida y protección financiera</h3>
+          <p id="rt5-p">Entiende las opciones disponibles y cómo proteger a tu familia adecuadamente.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+          <h3 id="rt6-h">Planificación de retiro</h3>
+          <p id="rt6-p">Comienza a planificar tu futuro desde hoy con estrategias claras y accesibles.</p>
+        </div>
+        <div class="resource-topic">
+          <div class="rt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+          <h3 id="rt7-h">Educación financiera básica</h3>
+          <p id="rt7-p">Conceptos fundamentales para entender y mejorar tu salud financiera personal.</p>
+        </div>
+      </div>
+      <div class="resources-cta-box">
+        <h3 id="rec-cta-h">Más conocimiento, más oportunidades</h3>
+        <p id="rec-cta-p">Mientras más entiendes tus finanzas, más preparado estás para proteger tu futuro, organizar tus metas y avanzar con confianza.</p>
+        <a id="rec-cta-btn" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" class="btn-navy" onclick="openCalendly();return false">Agenda una consulta →</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== CONTACTO ===== -->
+<div id="page-contacto" class="page active">
+
+  <section class="hero-sub">
+    <div class="container">
+      <p id="con-tag" class="section-tag" style="color:rgba(255,255,255,0.6)">Hablemos</p>
+      <h1 id="con-h1">Estamos aquí para ayudarte</h1>
+      <div class="divider-line"></div>
+      <p id="con-hero-p">Dar el primer paso muchas veces puede sentirse difícil. En Avenza queremos que te sientas acompañado desde el inicio.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <!-- ROW 1: info left | form right -->
+      <div class="contact-grid" style="margin-bottom:2rem">
+        <div>
+          <h2 id="con-h2" class="section-title" style="font-size:1.5rem">Conecta con nosotros</h2>
+          <p id="con-p" style="color:var(--gray-600);line-height:1.75;margin-bottom:1.5rem">Ya sea que necesites ayuda con tus impuestos, quieras comenzar un negocio, organizar tus finanzas o proteger el futuro de tu familia, estaremos felices de ayudarte.</p>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+            <div class="ci-text"><div id="con-lbl-email" class="lbl">Email</div><div class="val">info@avenzafinancial.com</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+            <div class="ci-text"><div id="con-lbl-wa" class="lbl">WhatsApp</div><div class="val">+1 (000) 000-0000</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
+            <div class="ci-text"><div id="con-lbl-fb" class="lbl">Facebook</div><div class="val">Avenza Financial Consulting</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+            <div class="ci-text"><div id="con-lbl-ig" class="lbl">Instagram</div><div class="val">@avenzafinancial</div></div>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3 id="form-h3">Envíanos un mensaje</h3>
+          <p id="form-p">Te responderemos a la brevedad posible.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label id="form-lbl-name">Nombre</label>
+              <input id="form-ph-name" type="text" placeholder="Tu nombre completo">
+            </div>
+            <div class="form-group">
+              <label id="form-lbl-email">Correo electrónico</label>
+              <input id="form-ph-email" type="email" placeholder="tu@correo.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label id="form-lbl-srv">Servicio de interés</label>
+              <select>
+                <option id="form-ph-srv" value="">Selecciona un servicio</option>
+                <option id="form-opt1">Seguros de Vida</option>
+                <option id="form-opt2">Preparación de Impuestos</option>
+                <option id="form-opt3">Creación de LLC</option>
+                <option id="form-opt4">Bookkeeping</option>
+                <option id="form-opt5">Asesoría Financiera</option>
+                <option id="form-opt6">Planificación de Retiro</option>
+                <option id="form-opt7">Consultoría para Negocios</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label id="form-lbl-type">Tipo de consulta</label>
+              <select>
+                <option id="form-ph-type" value="">Selecciona</option>
+                <option id="form-opt-personal">Personal</option>
+                <option id="form-opt-biz">Empresarial</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label id="form-lbl-msg">Mensaje</label>
+            <textarea id="form-ph-msg" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+          </div>
+          <button id="form-submit" class="btn-submit">Enviar mensaje →</button>
+          <p id="form-footer-txt" style="font-size:.78rem;color:var(--gray-400);text-align:center;margin-top:1rem">A veces una buena orientación puede convertirse en el comienzo de un gran cambio.</p>
+        </div>
+      </div>
+
+      <!-- ROW 2: online-info left | calendly right -->
+      <div class="contact-grid">
+        <div class="online-info">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <p id="con-online-p">Las consultas son realizadas de manera <strong style="color:#fff">online</strong> para brindarte comodidad, flexibilidad y atención personalizada sin importar dónde te encuentres.</p>
+        </div>
+        <div style="background:var(--ocre);border-radius:var(--radius-lg);padding:2rem 2rem;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.25rem;height:100%">
+          <div>
+            <p style="font-size:.75rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.4rem">¿Prefieres agendar directo?</p>
+            <p style="color:#fff;font-weight:600;font-size:1.1rem;margin:0;line-height:1.4">Reserva tu consulta online en minutos</p>
+          </div>
+          <button onclick="openCalendly();return false" class="btn-primary" style="background:#fff;color:var(--ocre);font-weight:700;">
+            <svg class="calendly-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Agendar cita →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iQ2FwYV8yIiBkYXRhLW5hbWU9IkNhcGEgMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDMyLjI1IDkzLjEiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzNhNmZhNjsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjYmM1NTRiOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj4KICAgIDxnPgogICAgICA8Zz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0xMzEuMSwwaDkuMzZsMTguMjUsNDcuODRoLTcuNjVsLTQuOTktMTMuMzNoLTIwLjU3bC00Ljk5LDEzLjMzaC03LjY1TDEzMS4xLDBabTEyLjQ0LDI3LjY4bC03LjcyLTIwLjY0LTcuNzksMjAuNjRoMTUuNTFaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMTgzLjk5LDQ3Ljg0TDE2Ny41OSwwaDcuNzlsMTMuMDUsMzkuNDNMMjAxLjQyLDBoNy44NmwtMTYuNCw0Ny44NGgtOC44OFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0yMjYuNywwaDMzLjU1djYuODNoLTI2LjA0djEyLjk4aDIxLjY2djYuODNoLTIxLjY2djE0LjM1aDI2LjA0djYuODNoLTMzLjU1VjBaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjc3Ljc1LDBoMTAuMjVsMjAuMTYsMzcuOTNWMGg3LjUydjQ3Ljg0aC0xMC4yNWwtMjAuMTYtMzcuOTN2MzcuOTNoLTcuNTJWMFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zNzAsMHY0LjAzbC0yNS45LDM2Ljk3aDI1LjU2djYuODNoLTM1Ljg4di00LjAzbDI1LjktMzYuOTdoLTI1LjQ5VjBoMzUuODFaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNDA0LjY1LDBoOS4zNmwxOC4yNSw0Ny44NGgtNy42NWwtNC45OS0xMy4zM2gtMjAuNTdsLTQuOTksMTMuMzNoLTcuNjVMNDA0LjY1LDBabTEyLjQ0LDI3LjY4bC03LjcyLTIwLjY0LTcuNzksMjAuNjRoMTUuNTFaIi8+CiAgICAgIDwvZz4KICAgICAgPGc+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTEyLjg2LDcyLjI0aDE0LjIzdjIuOWgtMTEuMDR2NS41MWg5LjE5djIuOWgtOS4xOXY4Ljk4aC0zLjE5di0yMC4yOFoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0xMjguNzEsNzIuMjRoMy4xOXYyMC4yOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTMzLjkyLDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTU5LjMzLDcyLjI0aDMuOTdsNy43NCwyMC4yOGgtMy4yNWwtMi4xMi01LjY1aC04LjcybC0yLjEyLDUuNjVoLTMuMjRsNy43NC0yMC4yOFptNS4yNywxMS43M2wtMy4yNy04Ljc1LTMuMyw4Ljc1aDYuNThaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMTcyLjM0LDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMjAwLjU3LDc0Ljc2Yy0xLjA0LDAtMiwuMTctMi44OC41Mi0uODguMzUtMS42NC44NS0yLjI3LDEuNTEtLjY0LjY2LTEuMTQsMS40Ni0xLjQ5LDIuNDFzLS41NCwyLjAyLS41NCwzLjIyLjE4LDIuMjcuNTQsMy4yMi44NiwxLjc0LDEuNDksMi4zOWMuNjQuNjUsMS4zOSwxLjE0LDIuMjcsMS40OS44OC4zNSwxLjg0LjUyLDIuODguNTIsMS43LDAsMy4xNi0uNDQsNC4zOS0xLjMsMS4yMy0uODcsMi4wNi0yLjEyLDIuNTEtMy43NGgzLjM5Yy0uMjUsMS4yMi0uNjgsMi4zMS0xLjI3LDMuMjktLjYuOTgtMS4zNCwxLjgxLTIuMjMsMi41MS0uODkuNjktMS45LDEuMjMtMy4wNCwxLjYxLTEuMTQuMzgtMi4zOS41Ni0zLjc0LjU2LTEuNTYsMC0yLjk5LS4yNi00LjI5LS43Ny0xLjI5LS41MS0yLjQtMS4yMy0zLjMzLTIuMTYtLjkzLS45My0xLjY0LTIuMDQtMi4xNC0zLjMzcy0uNzUtMi43Mi0uNzUtNC4yOS4yNS0yLjk5Ljc1LTQuMjljLjUtMS4yOSwxLjIyLTIuNDEsMi4xNC0zLjMzLjkzLS45MywyLjA0LTEuNjUsMy4zMy0yLjE2czIuNzItLjc3LDQuMjktLjc3YzEuMzMsMCwyLjU3LjE5LDMuNzEuNTYsMS4xNC4zOCwyLjE1LjkxLDMuMDQsMS41OS44OS42OSwxLjY0LDEuNTEsMi4yNSwyLjQ4LjYxLjk3LDEuMDQsMi4wNSwxLjI5LDMuMjVoLTMuNDJjLS40Ni0xLjYtMS4zLTIuODQtMi41MS0zLjctMS4yMS0uODYtMi42Ni0xLjI5LTQuMzYtMS4yOVoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0yMTIuNzQsNzIuMjRoMy4xOXYyMC4yOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMjI1LjI1LDcyLjI0aDMuOTdsNy43NCwyMC4yOGgtMy4yNWwtMi4xMi01LjY1aC04LjcybC0yLjEyLDUuNjVoLTMuMjRsNy43NC0yMC4yOFptNS4yNywxMS43M2wtMy4yNy04Ljc1LTMuMyw4Ljc1aDYuNThaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMjM4LjI2LDcyLjI0aDMuMTl2MTcuMzhoMTAuNDZ2Mi45aC0xMy42NXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMjcwLjYsNzQuNzZjLTEuMDQsMC0yLC4xNy0yLjg4LjUyLS44OC4zNS0xLjY0Ljg1LTIuMjcsMS41MS0uNjQuNjYtMS4xNCwxLjQ2LTEuNDksMi40MXMtLjU0LDIuMDItLjU0LDMuMjIuMTgsMi4yNy41NCwzLjIyLjg2LDEuNzQsMS40OSwyLjM5Yy42NC42NSwxLjM5LDEuMTQsMi4yNywxLjQ5Ljg4LjM1LDEuODQuNTIsMi44OC41MiwxLjcsMCwzLjE2LS40NCw0LjM5LTEuMywxLjIzLS44NywyLjA2LTIuMTIsMi41MS0zLjc0aDMuMzljLS4yNSwxLjIyLS42OCwyLjMxLTEuMjcsMy4yOS0uNi45OC0xLjM0LDEuODEtMi4yMywyLjUxLS44OS42OS0xLjksMS4yMy0zLjA0LDEuNjEtMS4xNC4zOC0yLjM5LjU2LTMuNzQuNTYtMS41NiwwLTIuOTktLjI2LTQuMjktLjc3cy0yLjQtMS4yMy0zLjMzLTIuMTZjLS45My0uOTMtMS42NC0yLjA0LTIuMTQtMy4zM3MtLjc1LTIuNzItLjc1LTQuMjkuMjUtMi45OS43NS00LjI5LDEuMjItMi40MSwyLjE0LTMuMzNjLjkzLS45MywyLjA0LTEuNjUsMy4zMy0yLjE2czIuNzItLjc3LDQuMjktLjc3YzEuMzMsMCwyLjU3LjE5LDMuNzEuNTYsMS4xNC4zOCwyLjE1LjkxLDMuMDQsMS41OS44OS42OSwxLjY0LDEuNTEsMi4yNSwyLjQ4LjYxLjk3LDEuMDQsMi4wNSwxLjI5LDMuMjVoLTMuNDJjLS40Ni0xLjYtMS4zLTIuODQtMi41MS0zLjctMS4yMS0uODYtMi42Ni0xLjI5LTQuMzYtMS4yOVoiLz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Im0yOTIuODgsNzEuODZjMS41NiwwLDIuOTkuMjYsNC4yOS43NywxLjI5LjUxLDIuNCwxLjIzLDMuMzMsMi4xNi45My45MywxLjY1LDIuMDQsMi4xNiwzLjMzcy43NywyLjcyLjc3LDQuMjktLjI2LDIuOTktLjc3LDQuMjktMS4yMywyLjQtMi4xNiwzLjMzYy0uOTMuOTMtMi4wNCwxLjY1LTMuMzMsMi4xNi0xLjI5LjUxLTIuNzIuNzctNC4yOS43N3MtMi45OS0uMjYtNC4yOS0uNzctMi40LTEuMjMtMy4zMy0yLjE2Yy0uOTMtLjkzLTEuNjQtMi4wNC0yLjE0LTMuMzNzLS43NS0yLjcyLS43NS00LjI5LjI1LTIuOTkuNzUtNC4yOWMuNS0xLjI5LDEuMjItMi40MSwyLjE0LTMuMzMuOTMtLjkzLDIuMDQtMS42NSwzLjMzLTIuMTZzMi43Mi0uNzcsNC4yOS0uNzdabTAsMi45Yy0xLjA0LDAtMiwuMTctMi44OC41Mi0uODguMzUtMS42NC44NS0yLjI3LDEuNTEtLjY0LjY2LTEuMTQsMS40Ni0xLjQ5LDIuNDFzLS41NCwyLjAyLS41NCwzLjIyLjE4LDIuMjcuNTQsMy4yMi44NiwxLjc0LDEuNDksMi4zOWMuNjQuNjUsMS4zOSwxLjE0LDIuMjcsMS40OS44OC4zNSwxLjg0LjUyLDIuODguNTJzMi4wMy0uMTcsMi45MS0uNTJjLjg4LS4zNSwxLjY0LS44NCwyLjI4LTEuNDkuNjQtLjY1LDEuMTMtMS40NCwxLjQ5LTIuMzkuMzYtLjk1LjU0LTIuMDIuNTQtMy4yMnMtLjE4LTIuMjctLjU0LTMuMjJjLS4zNi0uOTUtLjg1LTEuNzUtMS40OS0yLjQxLS42NC0uNjYtMS40LTEuMTYtMi4yOC0xLjUxLS44OC0uMzUtMS44NS0uNTItMi45MS0uNTJaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzA1LjA1LDcyLjI0aDQuMzVsOC41NSwxNi4wOHYtMTYuMDhoMy4xOXYyMC4yOGgtNC4zNWwtOC41NS0xNi4wOHYxNi4wOGgtMy4xOXYtMjAuMjhaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzM1Ljk0LDg3LjE2YzAtLjYyLS4xNS0xLjExLS40Ni0xLjQ4LS4zMS0uMzctLjcyLS42Ny0xLjIyLS45cy0xLjA3LS40Mi0xLjcxLS41NmMtLjY0LS4xNS0xLjI4LS4yOS0xLjk0LS40NS0uODMtLjE5LTEuNjktLjQxLTIuNTYtLjY0cy0xLjY4LS41NS0yLjM5LS45N2MtLjcyLS40Mi0xLjMtLjk3LTEuNzUtMS42NXMtLjY4LTEuNTgtLjY4LTIuNjhjMC0uOTguMTktMS44NS41OC0yLjU5LjM5LS43NC45MS0xLjM3LDEuNTgtMS44OHMxLjQ1LS45LDIuMzYtMS4xNmMuOTEtLjI2LDEuODktLjM5LDIuOTYtLjM5czIuMS4xMywyLjk4LjM5Yy44OS4yNiwxLjY4LjU5LDIuMzkuOTcuNy4zOSwxLjMyLjgyLDEuODUsMS4yOS41My40Ny45OC45MywxLjM1LDEuMzhsLTIuMjYsMi4wNmMtLjc3LS45My0xLjY4LTEuNjktMi43MS0yLjI4LTEuMDMtLjU5LTIuMjUtLjg4LTMuNjQtLjg4LS43NSwwLTEuMzkuMDktMS45MS4yNnMtLjk1LjQtMS4yNy42OGMtLjMzLjI4LS41Ny42LS43Mi45Ny0uMTUuMzctLjIzLjc0LS4yMywxLjEzLDAsLjU2LjE0LDEuMDEuNDEsMS4zNS4yNy4zNC42My42MSwxLjA3LjgzLjQ0LjIxLjk1LjM4LDEuNTIuNTEuNTcuMTMsMS4xNS4yNywxLjc1LjQyLjU4LjE0LDEuMTguMjgsMS44LjQzLjYyLjE2LDEuMjMuMzMsMS44My41Mi42LjE5LDEuMTYuNDMsMS42OC43MXMuOTkuNjIsMS4zOSwxLjAzYy40MS40MS43Mi44OS45NiwxLjQ1cy4zNSwxLjIzLjM1LDJjMCwxLjAxLS4xOSwxLjg4LS41OCwyLjYyLS4zOS43NC0uOTEsMS4zNi0xLjU4LDEuODUtLjY3LjQ5LTEuNDQuODctMi4zMywxLjEyLS44OS4yNS0xLjg0LjM4LTIuODQuMzgtMS4wNiwwLTIuMDgtLjEzLTMuMDYtLjM4LS45OC0uMjUtMS44Ni0uNTgtMi42Ny0uOTdzLTEuNS0uODQtMi4xLTEuMzJjLS42LS40OC0xLjA2LS45Ni0xLjM5LTEuNDJsMi4yNi0yLjA2Yy45NywxLjA2LDIuMDMsMS44NiwzLjIsMi40MXMyLjM5LjgxLDMuNjcuODEsMi4yLS4yNCwyLjk2LS43M2MuNzUtLjQ4LDEuMTMtMS4yMSwxLjEzLTIuMTdaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzQwLjcyLDcyLjI0aDMuMTl2MTMuMjdjMCwxLjUxLjQ0LDIuNjcsMS4zMiwzLjQ4Ljg4LjgxLDIuMSwxLjIyLDMuNjcsMS4yMnMyLjY5LS40MSwzLjU2LTEuMjJjLjg3LS44MSwxLjMtMS45NywxLjMtMy40OHYtMTMuMjdoMy4xOXYxMy4wMWMwLDEuMjItLjE5LDIuMzEtLjU3LDMuMjlzLS45MiwxLjgtMS42NCwyLjQ4Yy0uNzIuNjgtMS41OCwxLjE5LTIuNTgsMS41NS0xLjAxLjM2LTIuMTQuNTQtMy40Mi41NHMtMi4zMi0uMTgtMy4zMi0uNTRjLTEtLjM2LTEuODQtLjg3LTIuNTQtMS41NS0uNjktLjY4LTEuMjMtMS41LTEuNjEtMi40OHMtLjU3LTIuMDctLjU3LTMuMjl2LTEzLjAxWiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTM1OC44Myw3Mi4yNGgzLjE5djE3LjM4aDEwLjQ2djIuOWgtMTMuNjV2LTIwLjI4WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTM3Ny4xNCw3NS4xNGgtNi4zNXYtMi45aDE1Ljg4djIuOWgtNi4zNXYxNy4zOWgtMy4xOXYtMTcuMzlaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJtMzg4LjI3LDcyLjI0aDMuMTl2MjAuMjhoLTMuMTl2LTIwLjI4WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTM5My40OCw3Mi4yNGg0LjM1bDguNTUsMTYuMDh2LTE2LjA4aDMuMTl2MjAuMjhoLTQuMzVsLTguNTUtMTYuMDh2MTYuMDhoLTMuMTl2LTIwLjI4WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTQyMS41OSw4Mi4wOWgxMC42NnYuMzJjMCwxLjU2LS4yNiwyLjk5LS43Nyw0LjI5cy0xLjIzLDIuNC0yLjE2LDMuMzNjLS45My45My0yLjA0LDEuNjUtMy4zMywyLjE2LTEuMjkuNTEtMi43Mi43Ny00LjI5Ljc3cy0yLjk5LS4yNi00LjI5LS43N2MtMS4yOS0uNTEtMi40LTEuMjMtMy4zMy0yLjE2LS45My0uOTMtMS42NS0yLjA0LTIuMTYtMy4zMy0uNTEtMS4yOS0uNzctMi43Mi0uNzctNC4yOXMuMjYtMi45OS43Ny00LjI5Yy41MS0xLjI5LDEuMjMtMi40MSwyLjE2LTMuMzMuOTMtLjkzLDIuMDQtMS42NSwzLjMzLTIuMTZzMi43Mi0uNzcsNC4yOS0uNzdjMS4zMywwLDIuNTcuMTksMy43MS41NiwxLjE0LjM4LDIuMTUuOTEsMy4wNCwxLjU5Ljg5LjY5LDEuNjQsMS41MSwyLjI1LDIuNDguNjEuOTcsMS4wNCwyLjA1LDEuMjksMy4yNWgtMy40NWMtLjQ0LTEuNi0xLjI3LTIuODQtMi40OC0zLjctMS4yMS0uODYtMi42Ni0xLjI5LTQuMzYtMS4yOS0xLjA0LDAtMiwuMTctMi44OC41Mi0uODguMzUtMS42NC44NS0yLjI3LDEuNTEtLjY0LjY2LTEuMTQsMS40Ni0xLjQ5LDIuNDFzLS41NCwyLjAyLS41NCwzLjIyLjE4LDIuMjcuNTQsMy4yMi44NiwxLjc0LDEuNDksMi4zOWMuNjQuNjUsMS4zOSwxLjE0LDIuMjcsMS40OS44OC4zNSwxLjg0LjUyLDIuODguNTIsMS43MiwwLDMuMTktLjQ0LDQuNC0xLjMsMS4yMi0uODcsMi4wNS0yLjEyLDIuNDktMy43NGgtNy4wMXYtMi45WiIvPgogICAgICA8L2c+CiAgICAgIDxnPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTQwLjc5LjkxTC4xNSw4OC4wN2MtLjQ5LDEuMDUuMjgsMi4yNSwxLjQzLDIuMjVoMTMuMDNjMi40NiwwLDQuNy0xLjQzLDUuNzQtMy42NUw1MC43NSwyMS40N2MuNzktMS43Ljc5LTMuNjUsMC01LjM1TDQzLjY2LjkxYy0uNTctMS4yMi0yLjMtMS4yMi0yLjg3LDBaIi8+CiAgICAgICAgPHBhdGggY2xhc3M9ImNscy0zIiBkPSJtMzIuMyw3My40OWwtNi44LDE0LjU4Yy0uNDksMS4wNS4yOCwyLjI1LDEuNDMsMi4yNWgxMy4wM2MyLjQ2LDAsNC43LTEuNDMsNS43NC0zLjY1bDYuOC0xNC41OGMuNDktMS4wNS0uMjgtMi4yNS0xLjQzLTIuMjVoLTEzLjAzYy0yLjQ2LDAtNC43LDEuNDMtNS43NCwzLjY1WiIvPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0ibTQ2LjQ5LDQ4LjkxbDE3LjYxLDM3Ljc2YzEuMDQsMi4yMywzLjI4LDMuNjUsNS43NCwzLjY1aDEzLjAzYzEuMTYsMCwxLjkyLTEuMiwxLjQzLTIuMjVsLTE3LjYxLTM3Ljc2Yy0xLjA0LTIuMjMtMy4yOC0zLjY1LTUuNzQtMy42NWgtMTMuMDNjLTEuMTYsMC0xLjkyLDEuMi0xLjQzLDIuMjVaIi8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==" alt="Avenza Financial Consulting">
+      <p id="footer-brand-p">Ayudamos a personas, familias y emprendedores a organizar sus finanzas, proteger su futuro y construir mayor estabilidad.</p>
+      <div class="footer-social">
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 id="footer-pages-h">Páginas</h4>
+      <ul>
+        <li><a id="footer-nav-home" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;home&#39;);return false">Home</a></li>
+        <li><a id="footer-nav-nosotros" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;nosotros&#39;);return false">Nosotros</a></li>
+        <li><a id="footer-nav-servicios" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Servicios</a></li>
+        <li><a id="footer-nav-recursos" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;recursos&#39;);return false">Recursos</a></li>
+        <li><a id="footer-nav-contacto" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;contacto&#39;);return false">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="footer-srv-h">Servicios</h4>
+      <ul>
+        <li><a id="footer-srv1" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Seguros de Vida</a></li>
+        <li><a id="footer-srv2" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Preparación de Impuestos</a></li>
+        <li><a id="footer-srv3" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Creación de LLC</a></li>
+        <li><a id="footer-srv4" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Bookkeeping</a></li>
+        <li><a id="footer-srv5" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Asesoría Financiera</a></li>
+        <li><a id="footer-srv6" href="file:///C:/Users/gerad/Downloads/avenza_site_8.html#" onclick="showPage(&#39;servicios&#39;);return false">Planificación de Retiro</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="footer-contact-h">Contacto</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        info@avenzafinancial.com
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        +1 (000) 000-0000
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        Consultas 100% online
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span id="footer-copy">© 2025 Avenza Financial Consulting. Todos los derechos reservados.</span>
+    <span id="footer-credit">Diseñado con dedicación</span>
+  </div>
+</footer>
+
+
+<script>
+var LANG = {
+  es: {"nav_home": "Home", "nav_about": "Nosotros", "nav_services": "Servicios", "nav_resources": "Recursos", "nav_contact": "Contacto", "nav_cta": "Agenda tu consulta", "mob_cta": "Agenda tu consulta →", "home_tag": "Financial Consulting", "home_h1": "Bienvenidos a<br><em>Avenza</em> Financial<br>Consulting", "home_hero_p": "Ayudamos a personas, familias y emprendedores a organizar sus finanzas, proteger su futuro y construir mayor estabilidad con orientación clara, profesional y humana.", "home_hero_small": "Impuestos · LLC · Bookkeeping · Seguros · Retiro · Asesoría", "home_hero_btn1": "Agenda tu consulta →", "home_hero_btn2": "Ver servicios", "home_hero_badge": "Consultas 100% online · Atención personalizada", "home_card_h3": "Nuestros servicios", "pill_1": "Seguros de Vida", "pill_2": "Preparación de Impuestos", "pill_3": "Creación de LLC", "pill_4": "Bookkeeping", "pill_5": "Asesoría Financiera", "pill_6": "Planificación de Retiro", "pill_7": "Consultoría para Negocios", "about_tag": "Sobre Avenza", "about_h2": "Más que servicios financieros, orientación para tu crecimiento", "about_p1": "En Avenza Financial Consulting entendemos lo abrumador que pueden sentirse los impuestos, las finanzas o el manejo de un negocio cuando nadie te ha enseñado cómo hacerlo correctamente.", "about_p2": "Por eso creamos un espacio donde las personas puedan encontrar orientación clara, profesional y accesible, sin sentirse confundidas por procesos complicados.", "about_check1": "Orientación clara y sin complicaciones", "about_check2": "Atención personalizada en cada caso", "about_check3": "Consultas 100% online, donde estés", "about_btn": "Conoce nuestra historia →", "about_box_h3": "Tu tranquilidad financiera comienza aquí", "about_box_p": "Nuestro enfoque no es solamente ofrecer servicios financieros, sino ayudarte a sentir más tranquilidad, organización y confianza en cada etapa de tu crecimiento.", "stat_lbl1": "Servicios especializados", "stat_lbl2": "Consultas online", "stat_lbl3": "Formación académica", "stat_lbl4": "Compromiso contigo", "srv_tag": "Lo que ofrecemos", "srv_h2": "Servicios pensados para ayudarte a crecer con confianza", "sc1_h": "Seguros de Vida", "sc1_p": "Protege el futuro de tu familia y crea mayor estabilidad financiera para quienes más amas.", "sc2_h": "Preparación de Impuestos", "sc2_p": "Presenta tus taxes personales y corporativos de manera organizada y profesional.", "sc3_h": "Creación y Registro de LLC", "sc3_p": "Formaliza tu negocio con mayor estructura, organización y seguridad.", "sc4_h": "Bookkeeping", "sc4_p": "Mantén tus finanzas organizadas y entiende mejor la situación financiera de tu negocio.", "sc5_h": "Asesoría Financiera", "sc5_p": "Organiza tus finanzas, crea mejores hábitos y construye estabilidad a largo plazo.", "sc6_h": "Planificación de Retiro", "sc6_p": "Comienza hoy a prepararte para un futuro más tranquilo y estable.", "srv_btn": "Ver todos los servicios →", "res_tag": "Educación financiera", "res_h2": "Aprende, organiza y crece", "res_p": "Creemos que la educación financiera puede transformar vidas. Por eso compartimos contenido claro y sencillo para ayudarte a tomar mejores decisiones.", "res_btn": "Explorar recursos →", "res_r1": "Taxes personales y corporativos", "res_r2": "LLC vs S-Corp: diferencias", "res_r3": "Bookkeeping y organización", "res_r4": "Consejos para emprendedores", "res_r5": "Seguros y protección financiera", "res_r6": "Planificación de retiro", "cta_h2": "Estamos aquí para ayudarte", "cta_p": "Ya sea que necesites ayuda con tus impuestos, quieras comenzar un negocio, organizar tus finanzas o proteger el futuro de tu familia, estaremos felices de acompañarte.", "cta_btn": "Agenda una consulta →", "cta_badge": "Consultas realizadas de manera online", "cta_pill1": "Impuestos", "cta_pill2": "LLC", "cta_pill3": "Bookkeeping", "cta_pill4": "Seguros de Vida", "cta_pill5": "Retiro", "cta_pill6": "Asesoría", "nos_tag": "Quiénes somos", "nos_h1": "La historia detrás de Avenza", "nos_hero_p": "Avenza Financial Consulting nació desde una historia real de crecimiento, esfuerzo y deseo de ayudar a otras personas a construir un futuro financiero más estable y organizado.", "nos_s1_h": "Nuestra historia", "nos_s1_p": "Como muchas personas, también enfrentamos momentos de incertidumbre financiera y situaciones que hicieron evidente lo importante que es tener orientación clara y acceso a educación financiera.", "nos_s2_h": "Formación y crecimiento", "nos_s2_p": "Con esfuerzo, disciplina y educación se construyó el camino profesional que dio vida a Avenza Financial Consulting, con estudios en Administración de Empresas con enfoque en Negocios Internacionales y posteriormente una Maestría en Administración.", "nos_s3_h": "La pasión por ayudar", "nos_s3_p": "A lo largo de ese proceso nació la pasión por ayudar a personas, familias y emprendedores a entender mejor sus finanzas, organizar sus negocios y tomar decisiones con mayor confianza.", "nos_btn": "Agenda tu consulta →", "nos_enf_h": "Nuestro enfoque", "nos_enf_p1": "Avenza Financial Consulting fue creada para brindar apoyo, educación y orientación a personas trabajadoras y emprendedores que desean crecer, proteger a sus familias y construir estabilidad financiera.", "nos_enf_p2": "Nuestro objetivo es que cada cliente se sienta escuchado, acompañado y guiado en cada etapa de su crecimiento financiero y profesional.", "nos_enf_quote": "\"Porque organizar tus finanzas no solamente cambia números, también puede cambiar tu tranquilidad, tu estabilidad y tu futuro.\"", "val1_h": "Confianza", "val1_p": "Tu información y tu futuro son tratados con total profesionalismo.", "val2_h": "Claridad", "val2_p": "Explicamos cada proceso de manera sencilla y comprensible.", "val3_h": "Cercanía", "val3_p": "Atención personalizada adaptada a tu situación única.", "val4_h": "Crecimiento", "val4_p": "Cada servicio está orientado a fortalecer tu futuro.", "nos_cta_h": "Tu crecimiento es nuestra misión", "nos_cta_p": "Estamos aquí para acompañarte en cada etapa de tu camino financiero con orientación clara, profesional y humana.", "nos_cta_btn": "Agenda tu consulta →", "srv_hero_tag": "Nuestros servicios", "srv_hero_h1": "Servicios diseñados para ayudarte a crecer con confianza", "srv_hero_p": "Ofrecemos soluciones financieras claras y personalizadas para ayudarte a organizar, proteger y fortalecer tus finanzas personales y de negocio.", "sd1_h": "Seguros de Vida", "sd1_p1": "Un seguro de vida es una herramienta importante para proteger a las personas que más amas y brindar estabilidad financiera en momentos inesperados.", "sd1_p2": "Te ayudamos a entender las diferentes opciones disponibles y encontrar una cobertura que se adapte a tus necesidades, metas y situación financiera.", "sd1_aside_h": "¿Para quién es?", "sd1_b1": "Personas que quieren proteger a su familia", "sd1_b2": "Padres con hijos dependientes", "sd1_b3": "Personas con responsabilidades financieras", "sd1_b4": "Quienes buscan crear estabilidad a largo plazo", "sd2_h": "Preparación de Impuestos", "sd2_p1": "Te ayudamos a presentar tus taxes de manera correcta, organizada y profesional, buscando evitar errores, multas y problemas futuros.", "sd2_p2": "También te orientamos para que entiendas mejor tu situación financiera y conozcas posibles deducciones o beneficios aplicables a tu caso.", "sd2_aside_h": "Incluye", "sd2_b1": "Taxes personales (Individual)", "sd2_b2": "Taxes corporativos", "sd2_b3": "Orientación sobre deducciones", "sd2_b4": "Revisión de situación fiscal", "sd3_h": "Creación y Registro de LLC", "sd3_p1": "Formalizar tu negocio puede ayudarte a crear mayor estructura, protección y organización financiera.", "sd3_p2": "Te acompañamos durante el proceso de creación y registro de tu LLC, explicándote cada paso de manera sencilla para que puedas comenzar con más seguridad y confianza.", "sd3_aside_h": "El proceso incluye", "sd3_b1": "Asesoría sobre tipo de entidad", "sd3_b2": "Registro de la LLC", "sd3_b3": "Orientación sobre estructura", "sd3_b4": "Pasos siguientes post-registro", "sd4_h": "Bookkeeping y Organización Financiera", "sd4_p1": "Mantener tus ingresos, gastos y movimientos financieros organizados es clave para entender la realidad financiera de tu negocio.", "sd4_p2": "Nuestro servicio de bookkeeping te ayuda a mantener tus cuentas claras, prepararte correctamente para taxes y tomar decisiones más inteligentes.", "sd4_aside_h": "Beneficios", "sd4_b1": "Cuentas siempre al día", "sd4_b2": "Preparación correcta para taxes", "sd4_b3": "Visibilidad financiera clara", "sd4_b4": "Decisiones más inteligentes", "sd5_h": "Asesoría Financiera", "sd5_p1": "Nuestra asesoría está enfocada en ayudarte a entender mejor tu situación económica, organizar tus finanzas y construir estabilidad a largo plazo.", "sd5_p2": "También brindamos orientación para personas que desean salir de deudas, crear presupuestos y mejorar sus hábitos financieros.", "sd5_aside_h": "Ideal para", "sd5_b1": "Personas que quieren organizar sus finanzas", "sd5_b2": "Quienes buscan salir de deudas", "sd5_b3": "Emprendedores en crecimiento", "sd5_b4": "Familias con metas financieras", "sd6_h": "Planificación de Retiro", "sd6_p1": "La planificación de retiro te ayuda a prepararte financieramente para las próximas etapas de tu vida y construir mayor tranquilidad a largo plazo.", "sd6_p2": "Te orientamos sobre diferentes opciones y estrategias para comenzar a construir estabilidad para tu futuro desde hoy.", "sd6_aside_h": "Te ayudamos con", "sd6_b1": "Opciones de planes de retiro", "sd6_b2": "Estrategias de ahorro a largo plazo", "sd6_b3": "Proyecciones financieras", "sd6_b4": "Pasos para comenzar hoy", "sd7_h": "Consultoría para Pequeños Negocios", "sd7_p1": "Emprender puede ser emocionante, pero también desafiante cuando no existe orientación clara sobre organización y procesos financieros.", "sd7_p2": "Nuestro enfoque es ayudarte a estructurar y organizar tu negocio para que puedas crecer de manera más profesional y estable.", "sd7_aside_h": "Áreas de apoyo", "sd7_b1": "Estructura y organización del negocio", "sd7_b2": "Procesos financieros básicos", "sd7_b3": "Orientación para emprendedores", "sd7_b4": "Plan de crecimiento profesional", "srv_cta_h": "Agenda tu consulta", "srv_cta_p": "Estamos aquí para ayudarte a encontrar soluciones claras para tus necesidades financieras y acompañarte en cada etapa de tu crecimiento.", "srv_cta_btn": "Contáctanos →", "rec_tag": "Educación financiera", "rec_h1": "Aprende, organiza y crece", "rec_hero_p": "Creemos que la educación financiera puede transformar vidas. Muchas personas nunca tuvieron la oportunidad de aprender sobre impuestos, negocios, ahorro o cómo organizar correctamente sus finanzas.", "rec_content_tag": "Contenido educativo", "rec_content_h": "Temas que compartiremos contigo", "rec_content_p": "Por eso en Avenza Financial Consulting queremos crear un espacio donde puedas encontrar información clara, sencilla y útil para tomar mejores decisiones financieras.", "rt1_h": "Taxes personales y corporativos", "rt1_p": "Entiende cómo funcionan los impuestos, fechas clave y cómo prepararte cada año.", "rt2_h": "LLC vs S-Corp: diferencias", "rt2_p": "Conoce las ventajas de cada estructura y cuál se adapta mejor a tu negocio.", "rt3_h": "Bookkeeping y organización financiera", "rt3_p": "Aprende cómo mantener tus finanzas ordenadas desde el primer día de tu negocio.", "rt4_h": "Consejos para emprendedores", "rt4_p": "Guías prácticas para estructurar, organizar y hacer crecer tu negocio.", "rt5_h": "Seguros de vida y protección financiera", "rt5_p": "Entiende las opciones disponibles y cómo proteger a tu familia adecuadamente.", "rt6_h": "Planificación de retiro", "rt6_p": "Comienza a planificar tu futuro desde hoy con estrategias claras y accesibles.", "rt7_h": "Educación financiera básica", "rt7_p": "Conceptos fundamentales para entender y mejorar tu salud financiera personal.", "rec_cta_h": "Más conocimiento, más oportunidades", "rec_cta_p": "Mientras más entiendes tus finanzas, más preparado estás para proteger tu futuro, organizar tus metas y avanzar con confianza.", "rec_cta_btn": "Agenda una consulta →", "con_tag": "Hablemos", "con_h1": "Estamos aquí para ayudarte", "con_hero_p": "Dar el primer paso muchas veces puede sentirse difícil. En Avenza queremos que te sientas acompañado desde el inicio.", "con_h2": "Conecta con nosotros", "con_p": "Ya sea que necesites ayuda con tus impuestos, quieras comenzar un negocio, organizar tus finanzas o proteger el futuro de tu familia, estaremos felices de ayudarte.", "con_lbl_email": "Email", "con_lbl_wa": "WhatsApp", "con_lbl_fb": "Facebook", "con_lbl_ig": "Instagram", "con_online_p": "Las consultas son realizadas de manera <strong style=\"color:#fff\">online</strong> para brindarte comodidad, flexibilidad y atención personalizada sin importar dónde te encuentres.", "form_h3": "Envíanos un mensaje", "form_p": "Te responderemos a la brevedad posible.", "form_lbl_name": "Nombre", "form_ph_name": "Tu nombre completo", "form_lbl_email": "Correo electrónico", "form_ph_email": "tu@correo.com", "form_lbl_srv": "Servicio de interés", "form_ph_srv": "Selecciona un servicio", "form_opt1": "Seguros de Vida", "form_opt2": "Preparación de Impuestos", "form_opt3": "Creación de LLC", "form_opt4": "Bookkeeping", "form_opt5": "Asesoría Financiera", "form_opt6": "Planificación de Retiro", "form_opt7": "Consultoría para Negocios", "form_lbl_type": "Tipo de consulta", "form_ph_type": "Selecciona", "form_opt_personal": "Personal", "form_opt_biz": "Empresarial", "form_lbl_msg": "Mensaje", "form_ph_msg": "Cuéntanos cómo podemos ayudarte...", "form_submit": "Enviar mensaje →", "form_footer_txt": "A veces una buena orientación puede convertirse en el comienzo de un gran cambio.", "footer_brand_p": "Ayudamos a personas, familias y emprendedores a organizar sus finanzas, proteger su futuro y construir mayor estabilidad.", "footer_pages_h": "Páginas", "footer_srv_h": "Servicios", "footer_contact_h": "Contacto", "footer_srv1": "Seguros de Vida", "footer_srv2": "Preparación de Impuestos", "footer_srv3": "Creación de LLC", "footer_srv4": "Bookkeeping", "footer_srv5": "Asesoría Financiera", "footer_srv6": "Planificación de Retiro", "footer_online": "Consultas 100% online", "footer_copy": "© 2025 Avenza Financial Consulting. Todos los derechos reservados.", "footer_credit": "Diseñado con dedicación"},
+  en: {"nav_home": "Home", "nav_about": "About Us", "nav_services": "Services", "nav_resources": "Resources", "nav_contact": "Contact", "nav_cta": "Schedule a Consultation", "mob_cta": "Schedule a Consultation →", "home_tag": "Financial Consulting", "home_h1": "Welcome to<br><em>Avenza</em> Financial<br>Consulting", "home_hero_p": "We help individuals, families, and entrepreneurs organize their finances, protect their future, and build greater stability with clear, professional, and human guidance.", "home_hero_small": "Taxes · LLC · Bookkeeping · Insurance · Retirement · Advisory", "home_hero_btn1": "Schedule a Consultation →", "home_hero_btn2": "View Services", "home_hero_badge": "100% online consultations · Personalized attention", "home_card_h3": "Our Services", "pill_1": "Life Insurance", "pill_2": "Tax Preparation", "pill_3": "LLC Formation", "pill_4": "Bookkeeping", "pill_5": "Financial Advisory", "pill_6": "Retirement Planning", "pill_7": "Business Consulting", "about_tag": "About Avenza", "about_h2": "More than financial services, guidance for your growth", "about_p1": "At Avenza Financial Consulting, we understand how overwhelming taxes, finances, or running a business can feel when no one has taught you how to do it correctly.", "about_p2": "That's why we created a space where people can find clear, professional, and accessible guidance without feeling confused by complicated processes.", "about_check1": "Clear and straightforward guidance", "about_check2": "Personalized attention in every case", "about_check3": "100% online consultations, wherever you are", "about_btn": "Our Story →", "about_box_h3": "Your financial peace of mind starts here", "about_box_p": "Our focus is not only to offer financial services, but to help you feel more peace of mind, organization, and confidence at every stage of your growth.", "stat_lbl1": "Specialized services", "stat_lbl2": "Online consultations", "stat_lbl3": "Academic background", "stat_lbl4": "Commitment to you", "srv_tag": "What We Offer", "srv_h2": "Services designed to help you grow with confidence", "sc1_h": "Life Insurance", "sc1_p": "Protect your family's future and build greater financial stability for those you love most.", "sc2_h": "Tax Preparation", "sc2_p": "File your personal and corporate taxes in an organized and professional manner.", "sc3_h": "LLC Formation & Registration", "sc3_p": "Formalize your business with greater structure, organization, and security.", "sc4_h": "Bookkeeping", "sc4_p": "Keep your finances organized and better understand your business's financial situation.", "sc5_h": "Financial Advisory", "sc5_p": "Organize your finances, build better habits, and create long-term stability.", "sc6_h": "Retirement Planning", "sc6_p": "Start preparing today for a more peaceful and stable future.", "srv_btn": "View All Services →", "res_tag": "Financial Education", "res_h2": "Learn, Organize & Grow", "res_p": "We believe financial education can transform lives. That's why we share clear and simple content to help you make better decisions.", "res_btn": "Explore Resources →", "res_r1": "Personal and Corporate Taxes", "res_r2": "LLC vs S-Corp: Differences", "res_r3": "Bookkeeping and Organization", "res_r4": "Tips for Entrepreneurs", "res_r5": "Insurance and Financial Protection", "res_r6": "Retirement Planning", "cta_h2": "We're Here to Help You", "cta_p": "Whether you need help with your taxes, want to start a business, organize your finances, or protect your family's future, we'll be happy to guide you.", "cta_btn": "Schedule a Consultation →", "cta_badge": "Consultations conducted online", "cta_pill1": "Taxes", "cta_pill2": "LLC", "cta_pill3": "Bookkeeping", "cta_pill4": "Life Insurance", "cta_pill5": "Retirement", "cta_pill6": "Advisory", "nos_tag": "Who We Are", "nos_h1": "The Story Behind Avenza", "nos_hero_p": "Avenza Financial Consulting was born from a real story of growth, hard work, and a desire to help others build a more stable and organized financial future.", "nos_s1_h": "Our Story", "nos_s1_p": "Like many people, we also faced moments of financial uncertainty and situations that made it clear how important it is to have clear guidance and access to financial education.", "nos_s2_h": "Education & Growth", "nos_s2_p": "Through hard work, discipline, and education, the professional path that gave life to Avenza Financial Consulting was built, with a degree in Business Administration with a focus on International Business, followed by a Master's in Business Administration.", "nos_s3_h": "The Passion to Help", "nos_s3_p": "Throughout that journey, a passion was born to help individuals, families, and entrepreneurs better understand their finances, organize their businesses, and make decisions with greater confidence.", "nos_btn": "Schedule a Consultation →", "nos_enf_h": "Our Approach", "nos_enf_p1": "Avenza Financial Consulting was created to provide support, education, and guidance to hardworking individuals and entrepreneurs who want to grow, protect their families, and build financial stability.", "nos_enf_p2": "Our goal is for every client to feel heard, supported, and guided at every stage of their financial and professional growth.", "nos_enf_quote": "\"Because organizing your finances doesn't just change numbers — it can change your peace of mind, your stability, and your future.\"", "val1_h": "Trust", "val1_p": "Your information and your future are handled with complete professionalism.", "val2_h": "Clarity", "val2_p": "We explain every process in a simple and understandable way.", "val3_h": "Closeness", "val3_p": "Personalized attention tailored to your unique situation.", "val4_h": "Growth", "val4_p": "Every service is focused on strengthening your future.", "nos_cta_h": "Your Growth Is Our Mission", "nos_cta_p": "We are here to accompany you at every stage of your financial journey with clear, professional, and human guidance.", "nos_cta_btn": "Schedule a Consultation →", "srv_hero_tag": "Our Services", "srv_hero_h1": "Services Designed to Help You Grow with Confidence", "srv_hero_p": "We offer clear, personalized financial solutions to help you organize, protect, and strengthen your personal and business finances.", "sd1_h": "Life Insurance", "sd1_p1": "A life insurance policy is an important tool to protect the people you love most and provide financial stability in unexpected moments.", "sd1_p2": "We help you understand the different options available and find coverage that fits your needs, goals, and financial situation.", "sd1_aside_h": "Who is it for?", "sd1_b1": "People who want to protect their family", "sd1_b2": "Parents with dependent children", "sd1_b3": "People with financial responsibilities", "sd1_b4": "Those looking to build long-term stability", "sd2_h": "Tax Preparation", "sd2_p1": "We help you file your taxes correctly, in an organized and professional manner, avoiding errors, penalties, and future issues.", "sd2_p2": "We also guide you to better understand your financial situation and identify possible deductions or benefits applicable to your case.", "sd2_aside_h": "Includes", "sd2_b1": "Personal taxes (Individual)", "sd2_b2": "Corporate taxes", "sd2_b3": "Guidance on deductions", "sd2_b4": "Tax situation review", "sd3_h": "LLC Formation & Registration", "sd3_p1": "Formalizing your business can help you create greater structure, protection, and financial organization.", "sd3_p2": "We guide you through the LLC creation and registration process, explaining each step simply so you can get started with more security and confidence.", "sd3_aside_h": "The process includes", "sd3_b1": "Entity type advisory", "sd3_b2": "LLC registration", "sd3_b3": "Structure guidance", "sd3_b4": "Next steps after registration", "sd4_h": "Bookkeeping & Financial Organization", "sd4_p1": "Keeping your income, expenses, and financial movements organized is key to understanding your business's financial reality.", "sd4_p2": "Our bookkeeping service helps you keep your accounts clear, prepare correctly for taxes, and make smarter decisions.", "sd4_aside_h": "Benefits", "sd4_b1": "Accounts always up to date", "sd4_b2": "Correct tax preparation", "sd4_b3": "Clear financial visibility", "sd4_b4": "Smarter decisions", "sd5_h": "Financial Advisory", "sd5_p1": "Our advisory is focused on helping you better understand your economic situation, organize your finances, and build long-term stability.", "sd5_p2": "We also provide guidance for people who want to get out of debt, create budgets, and improve their financial habits.", "sd5_aside_h": "Ideal for", "sd5_b1": "People who want to organize their finances", "sd5_b2": "Those looking to get out of debt", "sd5_b3": "Growing entrepreneurs", "sd5_b4": "Families with financial goals", "sd6_h": "Retirement Planning", "sd6_p1": "Retirement planning helps you financially prepare for the next stages of your life and build greater long-term peace of mind.", "sd6_p2": "We guide you on different options and strategies to start building stability for your future today.", "sd6_aside_h": "We help you with", "sd6_b1": "Retirement plan options", "sd6_b2": "Long-term savings strategies", "sd6_b3": "Financial projections", "sd6_b4": "Steps to start today", "sd7_h": "Small Business Consulting", "sd7_p1": "Entrepreneurship can be exciting, but also challenging when there is no clear guidance on organization and financial processes.", "sd7_p2": "Our focus is to help you structure and organize your business so you can grow in a more professional and stable manner.", "sd7_aside_h": "Areas of support", "sd7_b1": "Business structure and organization", "sd7_b2": "Basic financial processes", "sd7_b3": "Guidance for entrepreneurs", "sd7_b4": "Professional growth plan", "srv_cta_h": "Schedule Your Consultation", "srv_cta_p": "We are here to help you find clear solutions for your financial needs and accompany you at every stage of your growth.", "srv_cta_btn": "Contact Us →", "rec_tag": "Financial Education", "rec_h1": "Learn, Organize & Grow", "rec_hero_p": "We believe financial education can transform lives. Many people never had the opportunity to learn about taxes, business, savings, or how to correctly organize their finances.", "rec_content_tag": "Educational Content", "rec_content_h": "Topics We'll Share With You", "rec_content_p": "At Avenza Financial Consulting, we want to create a space where you can find clear, simple, and useful information to make better financial decisions.", "rt1_h": "Personal and Corporate Taxes", "rt1_p": "Understand how taxes work, key dates, and how to prepare each year.", "rt2_h": "LLC vs S-Corp: Differences", "rt2_p": "Learn the advantages of each structure and which one best fits your business.", "rt3_h": "Bookkeeping and Financial Organization", "rt3_p": "Learn how to keep your finances organized from day one of your business.", "rt4_h": "Tips for Entrepreneurs", "rt4_p": "Practical guides to structure, organize, and grow your business.", "rt5_h": "Life Insurance and Financial Protection", "rt5_p": "Understand the available options and how to properly protect your family.", "rt6_h": "Retirement Planning", "rt6_p": "Start planning your future today with clear and accessible strategies.", "rt7_h": "Basic Financial Education", "rt7_p": "Fundamental concepts to understand and improve your personal financial health.", "rec_cta_h": "More Knowledge, More Opportunities", "rec_cta_p": "The more you understand your finances, the better prepared you are to protect your future, organize your goals, and move forward with confidence.", "rec_cta_btn": "Schedule a Consultation →", "con_tag": "Let's Talk", "con_h1": "We're Here to Help You", "con_hero_p": "Taking the first step can often feel difficult. At Avenza, we want you to feel supported from the very beginning.", "con_h2": "Connect With Us", "con_p": "Whether you need help with your taxes, want to start a business, organize your finances, or protect your family's future, we'll be happy to help you.", "con_lbl_email": "Email", "con_lbl_wa": "WhatsApp", "con_lbl_fb": "Facebook", "con_lbl_ig": "Instagram", "con_online_p": "Consultations are conducted <strong style=\"color:#fff\">online</strong> to provide you with comfort, flexibility, and personalized attention no matter where you are.", "form_h3": "Send Us a Message", "form_p": "We'll get back to you as soon as possible.", "form_lbl_name": "Name", "form_ph_name": "Your full name", "form_lbl_email": "Email address", "form_ph_email": "you@email.com", "form_lbl_srv": "Service of interest", "form_ph_srv": "Select a service", "form_opt1": "Life Insurance", "form_opt2": "Tax Preparation", "form_opt3": "LLC Formation", "form_opt4": "Bookkeeping", "form_opt5": "Financial Advisory", "form_opt6": "Retirement Planning", "form_opt7": "Business Consulting", "form_lbl_type": "Consultation type", "form_ph_type": "Select", "form_opt_personal": "Personal", "form_opt_biz": "Business", "form_lbl_msg": "Message", "form_ph_msg": "Tell us how we can help you...", "form_submit": "Send Message →", "form_footer_txt": "Sometimes good guidance can become the beginning of a great change.", "footer_brand_p": "We help individuals, families, and entrepreneurs organize their finances, protect their future, and build greater stability.", "footer_pages_h": "Pages", "footer_srv_h": "Services", "footer_contact_h": "Contact", "footer_srv1": "Life Insurance", "footer_srv2": "Tax Preparation", "footer_srv3": "LLC Formation", "footer_srv4": "Bookkeeping", "footer_srv5": "Financial Advisory", "footer_srv6": "Retirement Planning", "footer_online": "100% Online Consultations", "footer_copy": "© 2025 Avenza Financial Consulting. All rights reserved.", "footer_credit": "Designed with dedication"}
+};
+
+var currentLang = 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  var L = LANG[lang];
+
+  // NAV
+  document.getElementById('nav-home').innerHTML = L.nav_home;
+  document.getElementById('nav-nosotros').innerHTML = L.nav_about;
+  document.getElementById('nav-servicios').innerHTML = L.nav_services;
+  document.getElementById('nav-recursos').innerHTML = L.nav_resources;
+  document.getElementById('nav-contacto').innerHTML = L.nav_contact;
+  document.getElementById('nav-cta-btn').innerHTML = L.nav_cta;
+
+  // Lang buttons
+  document.getElementById('btn-es').classList.toggle('active', lang==='es');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+
+  // Mobile menu
+  document.getElementById('mob-home').innerHTML = L.nav_home;
+  document.getElementById('mob-nosotros').innerHTML = L.nav_about;
+  document.getElementById('mob-servicios').innerHTML = L.nav_services;
+  document.getElementById('mob-recursos').innerHTML = L.nav_resources;
+  document.getElementById('mob-contacto').innerHTML = L.nav_contact;
+  document.getElementById('mob-cta').innerHTML = L.mob_cta;
+
+  // HOME HERO
+  document.getElementById('home-tag').innerHTML = L.home_tag;
+  document.getElementById('home-h1').innerHTML = L.home_h1;
+  document.getElementById('home-hero-p').innerHTML = L.home_hero_p;
+  document.getElementById('home-hero-small').innerHTML = L.home_hero_small;
+  document.getElementById('home-hero-btn1').innerHTML = L.home_hero_btn1;
+  document.getElementById('home-hero-btn2').innerHTML = L.home_hero_btn2;
+  document.getElementById('home-hero-badge').innerHTML = '<span class="online-dot"></span>' + L.home_hero_badge;
+  document.getElementById('home-card-h3').innerHTML = L.home_card_h3;
+  document.getElementById('pill-1').querySelector('span:last-child') && (document.getElementById('pill-1').lastChild.textContent = L.pill_1);
+  ['pill_1','pill_2','pill_3','pill_4','pill_5','pill_6','pill_7'].forEach(function(k,i){
+    var el = document.getElementById('pill-'+(i+1));
+    if(el){ el.innerHTML = '<span class="dot"></span>' + L[k]; }
+  });
+
+  // HOME ABOUT
+  document.getElementById('about-tag').innerHTML = L.about_tag;
+  document.getElementById('about-h2').innerHTML = L.about_h2;
+  document.getElementById('about-p1').innerHTML = L.about_p1;
+  document.getElementById('about-p2').innerHTML = L.about_p2;
+  document.getElementById('about-check1').innerHTML = L.about_check1;
+  document.getElementById('about-check2').innerHTML = L.about_check2;
+  document.getElementById('about-check3').innerHTML = L.about_check3;
+  document.getElementById('about-btn').innerHTML = L.about_btn;
+  document.getElementById('about-box-h3').innerHTML = L.about_box_h3;
+  document.getElementById('about-box-p').innerHTML = L.about_box_p;
+  document.getElementById('stat-lbl1').innerHTML = L.stat_lbl1;
+  document.getElementById('stat-lbl2').innerHTML = L.stat_lbl2;
+  document.getElementById('stat-lbl3').innerHTML = L.stat_lbl3;
+  document.getElementById('stat-lbl4').innerHTML = L.stat_lbl4;
+
+  // HOME SERVICES SECTION
+  document.getElementById('srv-tag').innerHTML = L.srv_tag;
+  document.getElementById('srv-h2').innerHTML = L.srv_h2;
+  ['sc1','sc2','sc3','sc4','sc5','sc6'].forEach(function(k){
+    var hEl = document.getElementById(k+'-h');
+    var pEl = document.getElementById(k+'-p');
+    if(hEl) hEl.innerHTML = L[k+'_h'];
+    if(pEl) pEl.innerHTML = L[k+'_p'];
+  });
+  document.getElementById('srv-btn').innerHTML = L.srv_btn;
+
+  // HOME RESOURCES
+  document.getElementById('res-tag').innerHTML = L.res_tag;
+  document.getElementById('res-h2').innerHTML = L.res_h2;
+  document.getElementById('res-p').innerHTML = L.res_p;
+  document.getElementById('res-btn').innerHTML = L.res_btn;
+  ['res_r1','res_r2','res_r3','res_r4','res_r5','res_r6'].forEach(function(k,i){
+    var el = document.getElementById('res-r'+(i+1));
+    if(el){ el.lastChild.textContent = L[k]; }
+  });
+
+  // HOME CTA
+  document.getElementById('cta-h2').innerHTML = L.cta_h2;
+  document.getElementById('cta-p').innerHTML = L.cta_p;
+  document.getElementById('cta-btn').innerHTML = L.cta_btn;
+  document.getElementById('cta-badge').innerHTML = '<span class="online-dot"></span>' + L.cta_badge;
+  ['cta_pill1','cta_pill2','cta_pill3','cta_pill4','cta_pill5','cta_pill6'].forEach(function(k,i){
+    var el = document.getElementById('cta-pill'+(i+1));
+    if(el) el.innerHTML = L[k];
+  });
+
+  // NOSOTROS
+  document.getElementById('nos-tag').innerHTML = L.nos_tag;
+  document.getElementById('nos-h1').innerHTML = L.nos_h1;
+  document.getElementById('nos-hero-p').innerHTML = L.nos_hero_p;
+  document.getElementById('nos-s1-h').innerHTML = L.nos_s1_h;
+  document.getElementById('nos-s1-p').innerHTML = L.nos_s1_p;
+  document.getElementById('nos-s2-h').innerHTML = L.nos_s2_h;
+  document.getElementById('nos-s2-p').innerHTML = L.nos_s2_p;
+  document.getElementById('nos-s3-h').innerHTML = L.nos_s3_h;
+  document.getElementById('nos-s3-p').innerHTML = L.nos_s3_p;
+  document.getElementById('nos-btn').innerHTML = L.nos_btn;
+  document.getElementById('nos-enf-h').innerHTML = L.nos_enf_h;
+  document.getElementById('nos-enf-p1').innerHTML = L.nos_enf_p1;
+  document.getElementById('nos-enf-p2').innerHTML = L.nos_enf_p2;
+  document.getElementById('nos-enf-quote').innerHTML = L.nos_enf_quote;
+  document.getElementById('val1-h').innerHTML = L.val1_h;
+  document.getElementById('val1-p').innerHTML = L.val1_p;
+  document.getElementById('val2-h').innerHTML = L.val2_h;
+  document.getElementById('val2-p').innerHTML = L.val2_p;
+  document.getElementById('val3-h').innerHTML = L.val3_h;
+  document.getElementById('val3-p').innerHTML = L.val3_p;
+  document.getElementById('val4-h').innerHTML = L.val4_h;
+  document.getElementById('val4-p').innerHTML = L.val4_p;
+  document.getElementById('nos-cta-h').innerHTML = L.nos_cta_h;
+  document.getElementById('nos-cta-p').innerHTML = L.nos_cta_p;
+  document.getElementById('nos-cta-btn').innerHTML = L.nos_cta_btn;
+
+  // SERVICIOS PAGE
+  document.getElementById('srv-hero-tag').innerHTML = L.srv_hero_tag;
+  document.getElementById('srv-hero-h1').innerHTML = L.srv_hero_h1;
+  document.getElementById('srv-hero-p').innerHTML = L.srv_hero_p;
+  for(var i=1;i<=7;i++){
+    ['h','p1','p2','aside_h','b1','b2','b3','b4'].forEach(function(f){
+      var el = document.getElementById('sd'+i+'-'+f);
+      var key = 'sd'+i+'_'+f;
+      if(el && L[key]) el.innerHTML = L[key];
+    });
+  }
+  document.getElementById('srv-cta-h').innerHTML = L.srv_cta_h;
+  document.getElementById('srv-cta-p').innerHTML = L.srv_cta_p;
+  document.getElementById('srv-cta-btn').innerHTML = L.srv_cta_btn;
+
+  // RECURSOS PAGE
+  document.getElementById('rec-tag').innerHTML = L.rec_tag;
+  document.getElementById('rec-h1').innerHTML = L.rec_h1;
+  document.getElementById('rec-hero-p').innerHTML = L.rec_hero_p;
+  document.getElementById('rec-content-tag').innerHTML = L.rec_content_tag;
+  document.getElementById('rec-content-h').innerHTML = L.rec_content_h;
+  document.getElementById('rec-content-p').innerHTML = L.rec_content_p;
+  for(var i=1;i<=7;i++){
+    var hEl = document.getElementById('rt'+i+'-h');
+    var pEl = document.getElementById('rt'+i+'-p');
+    if(hEl) hEl.innerHTML = L['rt'+i+'_h'];
+    if(pEl) pEl.innerHTML = L['rt'+i+'_p'];
+  }
+  document.getElementById('rec-cta-h').innerHTML = L.rec_cta_h;
+  document.getElementById('rec-cta-p').innerHTML = L.rec_cta_p;
+  document.getElementById('rec-cta-btn').innerHTML = L.rec_cta_btn;
+
+  // CONTACTO PAGE
+  document.getElementById('con-tag').innerHTML = L.con_tag;
+  document.getElementById('con-h1').innerHTML = L.con_h1;
+  document.getElementById('con-hero-p').innerHTML = L.con_hero_p;
+  document.getElementById('con-h2').innerHTML = L.con_h2;
+  document.getElementById('con-p').innerHTML = L.con_p;
+  document.getElementById('con-lbl-email').innerHTML = L.con_lbl_email;
+  document.getElementById('con-lbl-wa').innerHTML = L.con_lbl_wa;
+  document.getElementById('con-lbl-fb').innerHTML = L.con_lbl_fb;
+  document.getElementById('con-lbl-ig').innerHTML = L.con_lbl_ig;
+  document.getElementById('con-online-p').innerHTML = L.con_online_p;
+  document.getElementById('form-h3').innerHTML = L.form_h3;
+  document.getElementById('form-p').innerHTML = L.form_p;
+  document.getElementById('form-lbl-name').innerHTML = L.form_lbl_name;
+  document.getElementById('form-ph-name').placeholder = L.form_ph_name;
+  document.getElementById('form-lbl-email').innerHTML = L.form_lbl_email;
+  document.getElementById('form-ph-email').placeholder = L.form_ph_email;
+  document.getElementById('form-lbl-srv').innerHTML = L.form_lbl_srv;
+  document.getElementById('form-ph-srv').innerHTML = L.form_ph_srv;
+  ['form_opt1','form_opt2','form_opt3','form_opt4','form_opt5','form_opt6','form_opt7'].forEach(function(k,i){
+    var el = document.getElementById('form-opt'+(i+1));
+    if(el) el.innerHTML = L[k];
+  });
+  document.getElementById('form-lbl-type').innerHTML = L.form_lbl_type;
+  document.getElementById('form-ph-type').innerHTML = L.form_ph_type;
+  document.getElementById('form-opt-personal').innerHTML = L.form_opt_personal;
+  document.getElementById('form-opt-biz').innerHTML = L.form_opt_biz;
+  document.getElementById('form-lbl-msg').innerHTML = L.form_lbl_msg;
+  document.getElementById('form-ph-msg').placeholder = L.form_ph_msg;
+  document.getElementById('form-submit').innerHTML = L.form_submit;
+  document.getElementById('form-footer-txt').innerHTML = L.form_footer_txt;
+
+  // FOOTER
+  document.getElementById('footer-brand-p').innerHTML = L.footer_brand_p;
+  document.getElementById('footer-pages-h').innerHTML = L.footer_pages_h;
+  document.getElementById('footer-srv-h').innerHTML = L.footer_srv_h;
+  document.getElementById('footer-contact-h').innerHTML = L.footer_contact_h;
+  document.getElementById('footer-srv1').innerHTML = L.footer_srv1;
+  document.getElementById('footer-srv2').innerHTML = L.footer_srv2;
+  document.getElementById('footer-srv3').innerHTML = L.footer_srv3;
+  document.getElementById('footer-srv4').innerHTML = L.footer_srv4;
+  document.getElementById('footer-srv5').innerHTML = L.footer_srv5;
+  document.getElementById('footer-srv6').innerHTML = L.footer_srv6;
+  document.getElementById('footer-online').innerHTML = L.footer_online;
+  document.getElementById('footer-copy').innerHTML = L.footer_copy;
+  document.getElementById('footer-credit').innerHTML = L.footer_credit;
+
+  // Footer nav links
+  document.getElementById('footer-nav-home').innerHTML = L.nav_home;
+  document.getElementById('footer-nav-nosotros').innerHTML = L.nav_about;
+  document.getElementById('footer-nav-servicios').innerHTML = L.nav_services;
+  document.getElementById('footer-nav-recursos').innerHTML = L.nav_resources;
+  document.getElementById('footer-nav-contacto').innerHTML = L.nav_contact;
+}
+
+
+function openCalendly() {
+  Calendly.initPopupWidget({url: 'https://calendly.com/avenza'});
+  return false;
+}
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  var navEl = document.getElementById('nav-' + id);
+  if(navEl) navEl.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
+
+
+</body></html>

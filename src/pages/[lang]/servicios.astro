@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import CalendlyButton from '../../components/CalendlyButton.astro';
+import { langStaticPaths } from '../../i18n/paths';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return langStaticPaths();
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+
+const details = [
+  { n: 1, icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>' },
+  { n: 2, icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line>' },
+  { n: 3, icon: '<rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>' },
+  { n: 4, icon: '<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>' },
+  { n: 5, icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>' },
+  { n: 6, icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>' },
+  { n: 7, icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>' },
+];
+---
+<Base lang={lang} title={`${t('srv_hero_h1')} | Avenza`} description={t('srv_hero_p')}>
+  <section class="hero-sub">
+    <div class="container">
+      <p class="section-tag" style="color:rgba(255,255,255,0.6)">{t('srv_hero_tag')}</p>
+      <h1>{t('srv_hero_h1')}</h1>
+      <div class="divider-line"></div>
+      <p>{t('srv_hero_p')}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      {details.map((d, i) => (
+        <div class="service-detail" style={i === details.length - 1 ? 'border-bottom:none' : undefined}>
+          <div>
+            <div class="service-detail-icon"><svg viewBox="0 0 24 24" set:html={d.icon}></svg></div>
+            <h2>{t(`sd${d.n}_h` as any)}</h2>
+            <p>{t(`sd${d.n}_p1` as any)}</p>
+            <p style="margin-top:1rem">{t(`sd${d.n}_p2` as any)}</p>
+          </div>
+          <div class="service-detail-aside">
+            <h4>{t(`sd${d.n}_aside_h` as any)}</h4>
+            <div class="service-bullet">{t(`sd${d.n}_b1` as any)}</div>
+            <div class="service-bullet">{t(`sd${d.n}_b2` as any)}</div>
+            <div class="service-bullet">{t(`sd${d.n}_b3` as any)}</div>
+            <div class="service-bullet">{t(`sd${d.n}_b4` as any)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>{t('srv_cta_h')}</h2>
+      <p>{t('srv_cta_p')}</p>
+      <CalendlyButton label={t('srv_cta_btn')} variant="primary" />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,20 @@
+{
+  "name": "avenza",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler dev",
+    "deploy": "astro build && wrangler deploy",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
+    "astro": "^5.13.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}

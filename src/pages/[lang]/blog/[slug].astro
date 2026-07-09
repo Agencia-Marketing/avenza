@@ -1,0 +1,41 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { type Lang } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { lang: post.data.lang, slug: post.id.split('/').pop()! },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const base = `/${lang}`;
+const { Content } = await render(post);
+
+const dateFmt = new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' });
+const backLabel = lang === 'es' ? '← Volver al blog' : '← Back to blog';
+---
+<Base lang={lang} title={`${post.data.title} | Avenza`} description={post.data.description} ogImage={post.data.cover ?? '/logo.svg'}>
+  <section>
+    <div class="container">
+      <article class="post">
+        <a class="post-back" href={`${base}/blog`}>{backLabel}</a>
+        <div class="post-meta">{dateFmt.format(post.data.pubDate)}</div>
+        <h1>{post.data.title}</h1>
+        {post.data.tags.length > 0 && (
+          <div class="blog-tags" style="margin-bottom:1rem">
+            {post.data.tags.map((tag) => (<span class="blog-tag">{tag}</span>))}
+          </div>
+        )}
+        {post.data.cover && <img class="cover" src={post.data.cover} alt="" />}
+        <div class="post-body">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,144 @@
+---
+import Base from '../../layouts/Base.astro';
+import CalendlyButton from '../../components/CalendlyButton.astro';
+import { langStaticPaths } from '../../i18n/paths';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return langStaticPaths();
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+const base = `/${lang}`;
+
+const pills = ['pill_1', 'pill_2', 'pill_3', 'pill_4', 'pill_5', 'pill_6', 'pill_7'] as const;
+const services = [
+  { key: 'sc1', icon: 'shield' },
+  { key: 'sc2', icon: 'file' },
+  { key: 'sc3', icon: 'building' },
+  { key: 'sc4', icon: 'dollar' },
+  { key: 'sc5', icon: 'users' },
+  { key: 'sc6', icon: 'home' },
+] as const;
+const resItems = ['res_r1', 'res_r2', 'res_r3', 'res_r4', 'res_r5', 'res_r6'] as const;
+const ctaPills = ['cta_pill1', 'cta_pill2', 'cta_pill3', 'cta_pill4', 'cta_pill5', 'cta_pill6'] as const;
+---
+<Base lang={lang} title={`${t('home_h1').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()} | Avenza`} description={t('home_hero_p')}>
+  <section class="hero-home">
+    <div class="container">
+      <div class="hero-home-grid">
+        <div>
+          <span class="hero-tag">{t('home_tag')}</span>
+          <h1 set:html={t('home_h1')}></h1>
+          <p>{t('home_hero_p')}</p>
+          <p class="small">{t('home_hero_small')}</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+            <CalendlyButton label={t('home_hero_btn1')} variant="primary" />
+            <a href={`${base}/servicios`} class="btn-outline">{t('home_hero_btn2')}</a>
+          </div>
+          <div class="online-badge" style="margin-top:1.5rem"><span class="online-dot"></span>{t('home_hero_badge')}</div>
+        </div>
+        <div class="hero-card">
+          <h3>{t('home_card_h3')}</h3>
+          {pills.map((p) => (
+            <div class="service-pill"><span class="dot"></span>{t(p)}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="section-tag">{t('about_tag')}</p>
+          <h2 class="section-title">{t('about_h2')}</h2>
+          <div class="divider-line left"></div>
+          <p style="color:var(--gray-600);line-height:1.75;margin-bottom:1rem">{t('about_p1')}</p>
+          <p style="color:var(--gray-600);line-height:1.75;margin-bottom:1rem">{t('about_p2')}</p>
+          <ul class="check-list">
+            <li>{t('about_check1')}</li>
+            <li>{t('about_check2')}</li>
+            <li>{t('about_check3')}</li>
+          </ul>
+          <a href={`${base}/nosotros`} class="btn-navy">{t('about_btn')}</a>
+        </div>
+        <div class="about-accent-box">
+          <h3>{t('about_box_h3')}</h3>
+          <p>{t('about_box_p')}</p>
+          <div class="stat-row">
+            <div class="stat-item"><div class="num">7+</div><div class="lbl">{t('stat_lbl1')}</div></div>
+            <div class="stat-item"><div class="num">100%</div><div class="lbl">{t('stat_lbl2')}</div></div>
+            <div class="stat-item"><div class="num">MBA</div><div class="lbl">{t('stat_lbl3')}</div></div>
+            <div class="stat-item"><div class="num">∞</div><div class="lbl">{t('stat_lbl4')}</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header centered">
+        <p class="section-tag">{t('srv_tag')}</p>
+        <h2 class="section-title">{t('srv_h2')}</h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="services-grid">
+        {services.map((s) => (
+          <div class="service-card">
+            <div class="service-icon">
+              {s.icon === 'shield' && <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>}
+              {s.icon === 'file' && <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>}
+              {s.icon === 'building' && <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>}
+              {s.icon === 'dollar' && <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>}
+              {s.icon === 'users' && <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
+              {s.icon === 'home' && <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>}
+            </div>
+            <h3>{t(`${s.key}_h` as any)}</h3>
+            <p>{t(`${s.key}_p` as any)}</p>
+          </div>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href={`${base}/servicios`} class="btn-navy">{t('srv_btn')}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources-bg">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+        <div>
+          <p class="section-tag">{t('res_tag')}</p>
+          <h2 class="section-title">{t('res_h2')}</h2>
+          <div class="divider-line left"></div>
+          <p style="color:var(--gray-600);line-height:1.75;margin-bottom:2rem">{t('res_p')}</p>
+          <a href={`${base}/recursos`} class="btn-navy">{t('res_btn')}</a>
+        </div>
+        <div class="resources-list">
+          {resItems.map((r) => (
+            <div class="resource-item">
+              <div class="ri"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+              <span>{t(r)}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>{t('cta_h2')}</h2>
+      <p>{t('cta_p')}</p>
+      <div class="cta-pills">
+        {ctaPills.map((c) => (<span class="cta-pill">{t(c)}</span>))}
+      </div>
+      <CalendlyButton label={t('cta_btn')} variant="primary" />
+      <div class="online-badge"><span class="online-dot"></span>{t('cta_badge')}</div>
+    </div>
+  </section>
+</Base>

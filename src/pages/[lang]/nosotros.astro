@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import CalendlyButton from '../../components/CalendlyButton.astro';
+import { langStaticPaths } from '../../i18n/paths';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return langStaticPaths();
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+
+const values = [
+  { key: 'val1', icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>' },
+  { key: 'val2', icon: '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>' },
+  { key: 'val3', icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>' },
+  { key: 'val4', icon: '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>' },
+] as const;
+---
+<Base lang={lang} title={`${t('nos_h1')} | Avenza`} description={t('nos_hero_p')}>
+  <section class="hero-sub">
+    <div class="container">
+      <p class="section-tag" style="color:rgba(255,255,255,0.6)">{t('nos_tag')}</p>
+      <h1>{t('nos_h1')}</h1>
+      <div class="divider-line"></div>
+      <p>{t('nos_hero_p')}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <div class="story-block"><h3>{t('nos_s1_h')}</h3><p>{t('nos_s1_p')}</p></div>
+          <div class="story-block"><h3>{t('nos_s2_h')}</h3><p>{t('nos_s2_p')}</p></div>
+          <div class="story-block"><h3>{t('nos_s3_h')}</h3><p>{t('nos_s3_p')}</p></div>
+          <CalendlyButton label={t('nos_btn')} variant="navy" />
+        </div>
+        <div>
+          <div class="enfoque-box">
+            <h3>{t('nos_enf_h')}</h3>
+            <p>{t('nos_enf_p1')}</p>
+            <p style="margin-top:1rem">{t('nos_enf_p2')}</p>
+            <p style="margin-top:1rem;font-style:italic;color:rgba(255,255,255,.6)" set:html={t('nos_enf_quote')}></p>
+          </div>
+          <div class="values-grid" style="margin-top:1.5rem">
+            {values.map((v) => (
+              <div class="value-card">
+                <div class="v-icon"><svg viewBox="0 0 24 24" set:html={v.icon}></svg></div>
+                <h4>{t(`${v.key}_h` as any)}</h4>
+                <p>{t(`${v.key}_p` as any)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>{t('nos_cta_h')}</h2>
+      <p>{t('nos_cta_p')}</p>
+      <CalendlyButton label={t('nos_cta_btn')} variant="primary" />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../i18n/ui';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { site as siteData } from '../config';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Optional OpenGraph image path (absolute or site-relative). */
+  ogImage?: string;
+}
+const { lang, title, description, ogImage = '/logo.svg' } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogUrl = new URL(ogImage, Astro.site).href;
+
+// hreflang alternates: same page in each locale.
+const strippedPath = Astro.url.pathname.replace(/^\/(es|en)(?=\/|$)/, '') || '/';
+const altEs = new URL(`/es${strippedPath === '/' ? '/' : strippedPath}`, Astro.site).href;
+const altEn = new URL(`/en${strippedPath === '/' ? '/' : strippedPath}`, Astro.site).href;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href={altEs} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="x-default" href={altEs} />
+
+    <!-- OpenGraph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteData.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts (CDN — replaces the broken local css2 reference) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Calendly popup widget (CDN) -->
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <Nav lang={lang} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    <!-- Calendly: upgrade [data-calendly] links to an inline popup when the widget loads. -->
+    <script>
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest<HTMLAnchorElement>('a[data-calendly]');
+        if (!link) return;
+        const w = window as unknown as { Calendly?: { initPopupWidget: (o: { url: string }) => void } };
+        if (w.Calendly) {
+          e.preventDefault();
+          w.Calendly.initPopupWidget({ url: link.href });
+        }
+        // else: fall through to the normal link (opens Calendly in a new tab).
+      });
+    </script>
+  </body>
+</html>

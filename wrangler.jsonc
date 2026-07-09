@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "avenza",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
+  // Secrets (set via `wrangler secret put`):
+  //   RESEND_API_KEY   – API key for Resend (contact form email delivery)
+  //   CONTACT_TO        – (optional) destination inbox; defaults handled in code
+}

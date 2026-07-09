@@ -1,0 +1,28 @@
+---
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+// Build the mirror path in the other locale by swapping the leading /es|/en segment.
+const path = Astro.url.pathname;
+function toLocale(target: Lang): string {
+  const stripped = path.replace(/^\/(es|en)(?=\/|$)/, '');
+  const next = `/${target}${stripped}`;
+  return next.endsWith('/') || next.includes('.') ? next : next;
+}
+---
+<div class="lang-switcher">
+  <a
+    class={`lang-btn ${lang === 'es' ? 'active' : ''}`.trim()}
+    href={toLocale('es')}
+    hreflang="es"
+    aria-label="Español">ES</a>
+  <a
+    class={`lang-btn ${lang === 'en' ? 'active' : ''}`.trim()}
+    href={toLocale('en')}
+    hreflang="en"
+    aria-label="English">EN</a>
+</div>

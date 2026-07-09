@@ -1,0 +1,58 @@
+# Sveltia CMS configuration
+# Docs: https://github.com/sveltia/sveltia-cms
+#
+# BEFORE THIS WORKS you must set:
+#   1. backend.repo   -> your GitHub "owner/repo"
+#   2. backend.base_url -> the URL of your deployed sveltia-cms-auth Worker
+#      (see public/admin/README.md for the one-time OAuth setup)
+
+backend:
+  name: github
+  repo: Agencia-Marketing/avenza
+  branch: main
+  base_url: https://avenza-cms-auth.YOUR-SUBDOMAIN.workers.dev # <-- CHANGE to your auth Worker
+
+# Uploaded images are committed to /public/blog-images and served from /blog-images
+media_folder: "public/blog-images"
+public_folder: "/blog-images"
+
+collections:
+  - name: blog_es
+    label: "Blog (Español)"
+    label_singular: "Artículo"
+    folder: "src/content/blog/es"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{title}} — {{pubDate}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: "Título", widget: string }
+      - { name: description, label: "Descripción", widget: text }
+      - { name: pubDate, label: "Fecha", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: cover, label: "Imagen de portada", widget: image, required: false, allow_multiple: false }
+      - { name: tags, label: "Etiquetas", widget: list, required: false }
+      - { name: draft, label: "Borrador", widget: boolean, default: false }
+      - { name: lang, label: "Idioma", widget: hidden, default: es }
+      - { name: body, label: "Contenido", widget: markdown }
+
+  - name: blog_en
+    label: "Blog (English)"
+    label_singular: "Post"
+    folder: "src/content/blog/en"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{title}} — {{pubDate}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: description, label: "Description", widget: text }
+      - { name: pubDate, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: cover, label: "Cover image", widget: image, required: false, allow_multiple: false }
+      - { name: tags, label: "Tags", widget: list, required: false }
+      - { name: draft, label: "Draft", widget: boolean, default: false }
+      - { name: lang, label: "Language", widget: hidden, default: en }
+      - { name: body, label: "Content", widget: markdown }
