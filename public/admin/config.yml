@@ -10,7 +10,8 @@ backend:
   name: github
   repo: Agencia-Marketing/avenza
   branch: main
-  base_url: https://avenza-cms-auth.YOUR-SUBDOMAIN.workers.dev # <-- CHANGE to your auth Worker
+  base_url: https://sveltia-cms-auth.joshy212yes.workers.dev
+  auth_methods: [oauth]
 
 # Uploaded images are committed to /public/blog-images and served from /blog-images
 media_folder: "public/blog-images"
