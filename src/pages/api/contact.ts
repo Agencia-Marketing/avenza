@@ -55,7 +55,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     return reply(400, false, 'Invalid input.');
   }
 
-  const to = env.CONTACT_TO || 'info@avenzafinancial.com';
+  const to = env.CONTACT_TO || 'info@avenzafinancialconsulting.com';
   // `from` must be an address on a Resend-verified domain.
   const from = env.CONTACT_FROM || 'Avenza Website <onboarding@resend.dev>';
 
