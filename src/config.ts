@@ -4,9 +4,9 @@ export const site = {
   // Real Calendly scheduling URL (placeholder until provided by the client).
   calendlyUrl: 'https://calendly.com/avenza',
   email: 'info@avenzafinancialconsulting.com',
-  phone: '+1 (201) 993-6203',
+  phone: '+1 (201) 205-6356',
   // WhatsApp click-to-chat number in international format, digits only.
-  whatsapp: '12019936203',
+  whatsapp: '12012056356',
   social: {
     facebook: 'https://www.facebook.com/profile.php?id=61590289580980',
     instagram: 'https://www.instagram.com/avenza_financial_consulting/',
