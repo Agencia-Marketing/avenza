@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
-import { type Lang } from '../../../i18n/ui';
+import { useTranslations, type Lang } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -13,17 +13,17 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
 const base = `/${lang}`;
 const { Content } = await render(post);
 
 const dateFmt = new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' });
-const backLabel = lang === 'es' ? '← Volver al blog' : '← Back to blog';
 ---
 <Base lang={lang} title={`${post.data.title} | Avenza`} description={post.data.description} ogImage={post.data.cover ?? '/logo.svg'}>
   <section>
     <div class="container">
       <article class="post">
-        <a class="post-back" href={`${base}/blog`}>{backLabel}</a>
+        <a class="post-back" href={`${base}/recursos`}>{t('rec_back')}</a>
         <div class="post-meta">{dateFmt.format(post.data.pubDate)}</div>
         <h1>{post.data.title}</h1>
         {post.data.tags.length > 0 && (

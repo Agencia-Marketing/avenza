@@ -14,6 +14,7 @@ El sitio usa Sveltia CMS en `/admin` para editar el blog. El CMS guarda cambios 
   - Espanol: `src/content/blog/es/*.md`
   - Ingles: `src/content/blog/en/*.md`
 - Imagenes subidas desde el CMS: `public/blog-images`
+- Los articulos se publican en el sitio bajo `/es|en/recursos/<slug>` (la seccion de blog vive dentro de Recursos).
 
 Cada guardado del CMS crea un commit en GitHub. El pipeline/deploy conectado al repo debe reconstruir el sitio.
 

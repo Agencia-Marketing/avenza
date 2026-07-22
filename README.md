@@ -21,7 +21,8 @@ npm run preview    # ejecuta el build con wrangler dev (Worker local)
 ```
 
 Rutas: `/` redirige a `/es/`. Páginas: `/es|en/`, `/nosotros`, `/servicios`, `/recursos`,
-`/blog`, `/contacto`. Blog: `/es|en/blog` y `/es|en/blog/<slug>`.
+`/contacto`. Recursos incluye el listado y detalle del blog: `/es|en/recursos` y
+`/es|en/recursos/<slug>`.
 
 ## Contenido
 
